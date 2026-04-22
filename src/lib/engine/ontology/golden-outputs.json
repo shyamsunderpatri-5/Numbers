@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "system": "Chaldean-Compliant v1.1",
+    "certified_date": "2026-04-22"
+  },
+  "cases": [
+    {
+      "input": "1",
+      "type": "Root",
+      "must_include": ["leadership", "authority", "ambition", "solar"],
+      "forbidden": ["passive", "dependent", "life path", "reduces to"]
+    },
+    {
+      "input": "7",
+      "type": "Root",
+      "must_include": ["introspection", "spirituality", "mystery", "neptunian"],
+      "forbidden": ["materialistic", "socialite", "life path", "reduces to"]
+    },
+    {
+      "input": "8",
+      "type": "Root",
+      "must_include": ["discipline", "responsibility", "karma", "saturnine"],
+      "forbidden": ["fun-loving", "carefree", "impulsive", "life path", "reduces to"]
+    },
+    {
+      "input": "11",
+      "type": "Compound",
+      "must_include": ["hidden", "dangers", "trial", "treachery", "clenched", "hand"],
+      "forbidden": ["master teacher", "spiritual messenger", "life path"]
+    },
+    {
+      "input": "14",
+      "type": "Compound",
+      "must_include": ["movement", "business", "speculation", "risk", "natural", "forces"],
+      "forbidden": ["karmic debt", "temperance", "life path"]
+    },
+    {
+      "input": "17",
+      "type": "Compound",
+      "must_include": ["star", "magi", "spiritual", "strength", "superior", "trials"],
+      "forbidden": ["the star card", "hope and faith only", "life path"]
+    },
+    {
+      "input": "19",
+      "type": "Compound",
+      "must_include": ["prince", "heaven", "happiness", "success", "fortunate"],
+      "forbidden": ["ego issues", "arrogance only", "life path"]
+    },
+    {
+      "input": "23",
+      "type": "Compound",
+      "must_include": ["royal", "star", "lion", "protection", "superiors", "success"],
+      "forbidden": ["freedom seeking", "unstable", "life path"]
+    }
+  ]
+}

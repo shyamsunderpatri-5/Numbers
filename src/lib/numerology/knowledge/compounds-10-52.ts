@@ -1,0 +1,487 @@
+import { CompoundMeaning } from "../types";
+
+/**
+ * NUMERIQ.AI — Cheiro's Book of Numbers (Pure Edition) & Sepharial's Kabala
+ * Traditional Chaldean & Pythagorean Compound Number Interpretations (10-52).
+ */
+
+export const COMPOUND_MEANINGS: Record<number, CompoundMeaning> = {
+  10: {
+    compound: 10,
+    chaldeanName: "The Wheel of Fortune",
+    meaning: "Symbolised as the 'Wheel of Fortune.' It is a number of honour, of faith and self-confidence, of rise and fall; one's name will be known for good or evil, according to one's desires; it is a fortunate number in the sense that one's plans are likely to be carried out.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Reason, success, aspiration.",
+    indaName: "The Wheel of Fortune",
+    indaMeaning: "10 is symbolized by Isis and Osiris. A number of rise and farf according to personal desire. The name will be known for good or evil, depending on the action chosen. 10 is capable of arousing tl^ < extreme responses of love or hate — respect or fear. There is nj^",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  11: {
+    compound: 11,
+    chaldeanName: "A Clenched Hand",
+    meaning: "This is an ominous number to occultists. It gives warning of hidden dangers, trial, and treachery from others. It has a symbol of 'a Clenched Hand,' and 'a Lion Muzzled,' and of a person who will have great difficulties to contend against.",
+    isFavorable: false,
+    isPattern: false,
+    sepharialNote: "Discord, offence, deceit.",
+    laganNote: "The 'Intuitive Imager'. Radiates psychic magnetism and visionary power. Lives in theory and has the potency to manifest desires through intense focus, but must ground this energy to avoid becoming a mere daydreamer.",
+    indaName: "A Lion Muzzled — A Clenched Fist",
+    indaMeaning: "On the East, three Gates; on the North, three Gates; on the South, three Gates; on the West, three Gates. And the wall of the city had twelve foundations, and in them the names of the twelve apostles of the Lamb.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  12: {
+    compound: 12,
+    chaldeanName: "The Sacrifice",
+    meaning: "The symbolism of this number is suffering and anxiety of mind. It is also indicated as 'the Sacrifice' or 'the Victim' and generally foreshadows one being sacrificed for the plans or intrigues of others.",
+    isFavorable: false,
+    isPattern: false,
+    sepharialNote: "A fortunate writing - a town or city.",
+    laganNote: "Represents the 'Finisher' who ties up loose ends and completes cycles. Suggests unification and the potential to provide answers to long-standing questions for humanity.",
+    indaName: "The Sacrifice — The Victim",
+    indaMeaning: "12 men and women on a jury. There are 12 basic mineral salts in homeopathic medicine. When gold is weighed, there are 12 ounces to the pound; likewise with the weighing of drug?. There are 12 inches in a foot. Most fascinating of all, the Earth's minerals are also",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  13: {
+    compound: 13,
+    chaldeanName: "Death",
+    meaning: "Indicating change of plans, place, and such-like. Symbolised by 'Death' with a scythe. A symbol of 'Power' which if wrongly used will wreak destruction upon itself. Warning of the unknown.",
+    isFavorable: false,
+    isPattern: true,
+    patternType: 13,
+    sepharialNote: "Wickedness, wrong.",
+    laganNote: "The 'Karmic Debt' number. Not inherently unlucky, but indicates a need to settle past dues. Once the debt is paid, it offers a clean slate and the chance for a truly fresh start.",
+    indaName: "Regeneration — Change",
+    indaMeaning: "13 is not an unlucky number, as many people believe. The an- cients claimed that 'he who understands how to use the number 13 will be given power and dominion.' The symbol of 13 is a skeleton, or death, with a scythe, reaping down men in a field of. new-grown",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  14: {
+    compound: 14,
+    chaldeanName: "Movement & Challenge",
+    meaning: "A number of movement and combination. Fortunate for dealings with money, speculation, and changes in business, but with a strong element of risk and danger from natural forces.",
+    isFavorable: true,
+    isPattern: true,
+    patternType: 14,
+    sepharialNote: "Sacrifice, loss.",
+    indaName: "Movement . . . Challenge",
+    indaMeaning: "Magnetic communication with the public through writing, pub- lishing, and all media-related matters is associated with the 14. Pe- riodic changes in business and partnerships of all kinds are usually beneficial. Dealing with speculative matters brings luck; likewise,",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  15: {
+    compound: 15,
+    chaldeanName: "The Magician",
+    meaning: "A number of occult significance, magic and mystery. Associated with 'good talkers,' eloquence, gifts of Music and Art and a dramatic personality. Fortunate for obtaining money and favours.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Virtue, culture, integrity.",
+    laganNote: "Reflects the loving, caring, and nurturing aspect of a parent. Symbolic of a safe haven and community-oriented leadership that imagines a perfect and loving world.",
+    indaName: "The Magician",
+    indaMeaning: "15 is a number of deep esoteric significance, the alchemy vibra- tion through which all magic is manifested. It's extremely lucky and carries the essence of enchantment with it. 15 is associated with 'good talkers,' eloquence of speech, and the gifts of music, art, and",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  16: {
+    compound: 16,
+    chaldeanName: "The Shattered Citadel",
+    meaning: "Pictured by 'a Tower Struck by Lightning.' Gives warning of some strange fatality, danger of accidents and defeat of one's plans.",
+    isFavorable: false,
+    isPattern: true,
+    patternType: 16,
+    sepharialNote: "Luxury, sensuality, good-fortune.",
+    laganNote: "Connects to family and close relationships that 'blow up' when truths are submersed for too long. Allows toxic energies to burn away, leaving peace for a new life to be built.",
+    indaName: "The Shattered Citadel",
+    indaMeaning: "16 is pictured by the ancient Chaldeans as 'a Tower struck by Lightning, from which a man is falling, with a Crown on his head.' It warns of a strange fatality, also danger of accidents and the defeat of one's plans. If the name equals the Compound number 16, it would",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  17: {
+    compound: 17,
+    chaldeanName: "The Star of the Magi",
+    meaning: "The 8-pointed Star of Venus: a symbol of 'Peace and Love.' Expresses that the person has risen superior in spirit to the trials of life.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Misfortune, disregard, oblivion.",
+    laganNote: "The 'Force of the Brain'. Indicates a leader tuned in to the people and themselves. Once symmetry between spirit and matter is reached, thoughts and dreams become real through the Law of Attraction.",
+    indaName: "The Star of the Magi",
+    indaMeaning: "This is a highly spiritual number, and was expressed in sym- bolism by the ancient Chaldeans as the 8-pointed Star of Venus. The Star of the Magi is the image of Love and Peace, and promises that the person or entity it represents will rise superior in spirit to the trials and",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  18: {
+    compound: 18,
+    chaldeanName: "Materialism Striving",
+    meaning: "Symbolic of materialism striving to destroy the spiritual side. Associates a person with bitter quarrels, treachery, and danger from natural elements.",
+    isFavorable: false,
+    isPattern: false,
+    sepharialNote: "Miserliness, hardness, tyranny.",
+    indaName: "Spiritual-Material Conflict",
+    indaMeaning: "Of all Compound numbers, 18 has the most difficult symbolism to translate. (Read again on an earlier page of this chapter the rela- tionship of 18 to Jesus.) The ancients describe the Compound num- ber 18 with the following image: 'A rayed moon, from which drops of",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  19: {
+    compound: 19,
+    chaldeanName: "The Prince of Heaven",
+    meaning: "Extremely favourable. Promised success, happiness, and honour. Regarded as 'the Sun.' Surmounts difficulties.",
+    isFavorable: true,
+    isPattern: true,
+    patternType: 19,
+    sepharialNote: "Foolishness, insanity.",
+    indaName: "The Prince of Heaven",
+    indaMeaning: "19 is one of the most fortunate and favorable of all Compound numbers. It is symbolized as the Sun, and is called the Prince of Heaven because it indicates victory over all temporal failure and disap- pointment. It blesses the person or entity represented by it with all of",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  20: {
+    compound: 20,
+    chaldeanName: "The Awakening",
+    meaning: "The call to action for some great purpose. Awakening of new plans and ambitions.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Wisdom, rigour, melancholy.",
+    indaName: "The Awakening",
+    indaMeaning: "In addition to being called 'The Awakening,' this Compound number is also pictured by the ancient Chaldeans as 'The Judgment.' It has a peculiar interpretation, and is symbolized as 'a winged angel, sounding a trumpet, while from below, a man, woman, and child are",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  21: {
+    compound: 21,
+    chaldeanName: "The Crown of the Magi",
+    meaning: "Victory after a long fight. Advancement, honours, and general success in life.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Mystery, fecundity, production.",
+    indaName: "The Crown of the Magi",
+    indaMeaning: "21 is pictured as 'The Universe,' and is also called 'The Crown of the Magi.' It promises general success, and guarantees advancement, honors, awards, and general elevation in the life and career. It indi- cates victory after a long struggle, for the 'Crown of the Magi' is",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  22: {
+    compound: 22,
+    chaldeanName: "The Blinded Man",
+    meaning: "Warning of illusion and delusion. A good person who lives in a fool's paradise. Warning of the folly of others.",
+    isFavorable: false,
+    isPattern: false,
+    sepharialNote: "Chastisement, penalty, hurt.",
+    laganNote: "The 'Builder'. Takes visionary dreams and transposes them into material objects. Works within divine laws to create legacies and amass wealth to benefit humanity.",
+    indaName: "Submission — and Caution",
+    indaMeaning: "22 is symbolized by the ancients as 'a Good Man, blinded by the folly of others, with a knapsack on his back, full of errors.' In the image he seems to offer no defense against a ferocious tiger which is about to attack him. It's a warning number of illusion and delusion.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  23: {
+    compound: 23,
+    chaldeanName: "The Royal Star of the Lion",
+    meaning: "Promise of success, help from superiors and protection from those in high places.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Revolt, bigotry, prejudice.",
+    indaName: "The Royal Star of the Lion",
+    indaMeaning: "This is a karmic reward number. 23 bestows, not only a promise of success in personal and career endeavors, it guarantees help from superiors and protection from those in high places. It's a most fortu- nate number, and greatly blesses with abundant grace the person or",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  24: {
+    compound: 24,
+    chaldeanName: "Favorable Alignment",
+    meaning: "Promises the assistance of those of rank; gain through love and the opposite sex.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Travelling, exile, inconstancy.",
+    indaName: "Love — Money — Creativity",
+    indaMeaning: "This number is also most fortunate, another Compound number of karmic reward, justly earned in past incarnations, particularly when it's the birth number. It promises the assistance of those with power, and it indicates a close association with people of high rank and posi-",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  25: {
+    compound: 25,
+    chaldeanName: "Strength Gained",
+    meaning: "Denoting strength gained through experience; benefits through observation. Success through early trials.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Intelligence, progeny.",
+    indaName: "Discrimination and Analysis",
+    indaMeaning: "25 bestows spiritual wisdom gained through careful observation of people and things, and worldly success .by learning through experi- ence. Its strength comes from overcoming disappointments in the early life and possessing the rare quality of learning from past mis-",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  26: {
+    compound: 26,
+    chaldeanName: "Grave Warning",
+    meaning: "Foreshadows disasters brought about by association; ruin by bad advice and partnerships.",
+    isFavorable: false,
+    isPattern: false,
+    sepharialNote: "Benevolence, charity.",
+    laganNote: "A 'Connected Leader' vibration. Success is tied to the ability to connect deeply and personally with others.",
+    indaName: "Partnerships",
+    indaMeaning: "26 = 8.) It's most important advice for you — or for anyone you know whose name number is 4 or 8, or who was born on the 8th day of the month — or any date that reduces to 4 or 8, such as the 13th,",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  27: {
+    compound: 27,
+    chaldeanName: "The Sceptre",
+    meaning: "Promise of authority, power, and command. Indicates reward from the productive intellect.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Bravery, heroism, daring.",
+    indaName: "The Sceptre",
+    indaMeaning: "This is an excellent, harmonious, and fortunate number of cour- age and power, with a touch of enchantment. It blesses the person or entity it represents with a promise of authority and command. It guarantees that great rewards will come from the productive labors,",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  28: {
+    compound: 28,
+    chaldeanName: "Contradiction",
+    meaning: "Indicates loss through trust in others. A person of promise who may see all taken away.",
+    isFavorable: false,
+    isPattern: false,
+    sepharialNote: "Gifts, tokens, omens.",
+    indaName: "The Trusting Lamb",
+    indaMeaning: "28 is a number of puzzling and frustrating contradictions. It symbolizes a person (or entity) of fine promise, even genius, and great possibilities, with the capability of achieving impressive success, and the 28 person frequently does realize such success, only to see every-",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  29: {
+    compound: 29,
+    chaldeanName: "Uncertainty",
+    meaning: "Indicates uncertainties and treachery. Unexpected dangers and unreliable friends.",
+    isFavorable: false,
+    isPattern: false,
+    sepharialNote: "News, a chronicle.",
+    indaName: "Grace Under Pressure",
+    indaMeaning: "The 29 is a number of perhaps the heaviest Karma of all. It tests the person or entity it represents for spiritual strength, through trials and tribulations echoing the Old Testament story of Job. The life is filled with uncertainties, treachery and deception from others, unreli-",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  30: {
+    compound: 30,
+    chaldeanName: "Thoughtful Deduction",
+    meaning: "Mental superiority over fellows. Putting material things on one side for the mental plane.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Marriage, celebrity, celebration.",
+    indaName: "The Loner — Meditation",
+    indaMeaning: "This is a number of retrospection, thoughtful deduction, and mental superiority over others. However, it belongs completely to the mental plane, and those represented by it often put all material things to the side, not because they have to, but because they wish to do so.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  31: {
+    compound: 31,
+    chaldeanName: "The Isolated Man",
+    meaning: "Self-contained, lonely, and isolated. Not fortunate from a purely material standpoint.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Chaldean notation relates this to the property of unit 4.",
+    indaName: "The Recluse — the Hermit",
+    indaMeaning: "Those whose birth or name number is 31 should first read the analysis of the foregoing Compound number 30, because the 31 is 264 * LINDA GOODMAN'S STAR SIGNS very similar to it, except that the person (or entity) represented by this",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  32: {
+    compound: 32,
+    chaldeanName: "Communication & Nations",
+    meaning: "Associated with combinations of people or nations. Fortunate if the person holds to his own judgment.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Marriage nuptials, consummation.",
+    indaName: "Communication",
+    indaMeaning: "This Compound number has the same magical power to sway masses of people as the 14, the same help from those in high positions as the 23. Add all this to the natural ability to charm others with magnetic speech, and it's clear why 32 is sometimes known, by mod-",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  33: {
+    compound: 33,
+    chaldeanName: "The Master Teacher (Higher Octave)",
+    meaning: "The same vibration as number 24, but with double potency. Magic of love and creativity is deepened. Eventual financial success through harmonious partnerships.",
+    isFavorable: true,
+    isPattern: true,
+    patternType: 33,
+    sepharialNote: "Honor, fame, glory.",
+    indaName: "Love — Money — Creativity (Deepened)",
+    indaMeaning: "This number has no individual meaning of its own, but carries the same vibration as the 24 — except that the magic of love, the extent of originality and creativity, and the promise of eventual finan- cial success are deepened and increased. Due to the double 3, people",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  34: {
+    compound: 34,
+    chaldeanName: "Strength Gained (Higher Octave)",
+    meaning: "The same meaning as number 25. Strength gained through experience; spiritual wisdom and discovery.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "Discrimination and Analysis",
+    indaMeaning: "34 Has the same meaning as the number 25.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  35: {
+    compound: 35,
+    chaldeanName: "Partnerships (Higher Octave)",
+    meaning: "The same meaning as number 26. Contradictions; warns of dangers through bad advice and unhappy partnerships.",
+    isFavorable: false,
+    isPattern: false,
+    indaName: "Partnerships / Contradiction",
+    indaMeaning: "35 Has the same meaning as the number 26.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  36: {
+    compound: 36,
+    chaldeanName: "The Sceptre (Higher Octave)",
+    meaning: "The same meaning as number 27. Promise of authority and command. High intellectual or artistic achievement.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "The Sceptre",
+    indaMeaning: "36 Has the same meaning as the number 27.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  37: {
+    compound: 37,
+    chaldeanName: "Fortunate Friendships",
+    meaning: "Distinct potency; good and fortunate friendships in love and partnerships.",
+    isFavorable: true,
+    isPattern: false,
+    sepharialNote: "Laudation, honours (Sepharial maps 37 to the property of 10).",
+    indaName: "Sensitive Partnerships",
+    indaMeaning: "This number has a distinct potency of its own. It's associated with an extremely sensitive nature — good and fortunate friendships — a strong magnetism with the public, often in the area of the Arts — and productive partnerships of all kinds. It places an emphasis on",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  38: {
+    compound: 38,
+    chaldeanName: "Uncertainty (Higher Octave)",
+    meaning: "The same meaning as numbers 11 and 29. Warnings of treachery and deception. Needs spiritual strength to conquer trials.",
+    isFavorable: false,
+    isPattern: false,
+    indaName: "Grace Under Pressure / Conflict",
+    indaMeaning: "38 Has the same meaning as the numbers 11 and 29.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  39: {
+    compound: 39,
+    chaldeanName: "The Loner (Higher Octave)",
+    meaning: "The same meaning as number 30. Retrospection and mental superiority; retreat from the world.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "The Loner — Meditation",
+    indaMeaning: "39 Has the same meaning as the number 30.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  40: {
+    compound: 40,
+    chaldeanName: "The Recluse (Higher Octave)",
+    meaning: "The same meaning as number 31. Even more self-contained and isolated. Genius and political change.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "The Recluse — the Hermit",
+    indaMeaning: "40 Has the same meaning as the number 31.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  41: {
+    compound: 41,
+    chaldeanName: "Communication (Higher Octave)",
+    meaning: "The same meaning as number 32. Politician's vibration; ability to sway masses if holding to one's own judgment.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "Communication / Leadership",
+    indaMeaning: "41 Has the same meaning as the number 32.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  42: {
+    compound: 42,
+    chaldeanName: "Love & Money (Higher Octave)",
+    meaning: "The same meaning as number 24. Success through love and partnerships; gain through art and rank.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "Love — Money — Creativity",
+    indaMeaning: "42 Has the same meaning as the number 24.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  43: {
+    compound: 43,
+    chaldeanName: "Revolution / Upheaval",
+    meaning: "Unfortunate. Symbolised by revolution, strife, failure, and prevention.",
+    isFavorable: false,
+    isPattern: false,
+    indaName: "Revolution / Upheaval",
+    indaMeaning: "The ancients claim that this is an unfortunate number, and if the name equals a 43, the spelling should be changed to equal a more 266 * LINDA GOODMAN'S STAR SIGNS fortunate Compound number. It is symbolized by the tendency",
+    sourceConflict: true,
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  44: {
+    compound: 44,
+    chaldeanName: "Partnerships (Expansion)",
+    meaning: "The same meaning as number 26. Contradictions and warnings; disasters brought about by bad advice.",
+    isFavorable: false,
+    isPattern: false,
+    indaName: "Partnerships",
+    indaMeaning: "44 Has the same meaning as the number 26.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  45: {
+    compound: 45,
+    chaldeanName: "The Sceptre (Expansion)",
+    meaning: "The same meaning as number 27. Authority, command, and rewards from productive labor.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "The Sceptre",
+    indaMeaning: "45 Has the same meaning as the number 27.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  46: {
+    compound: 46,
+    chaldeanName: "Sensitive Partnerships (Expansion)",
+    meaning: "The same meaning as number 37. Sensitive nature and fortunate friendships in the arts.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "Sensitive Partnerships",
+    indaMeaning: "46 Has the same meaning as the number 37.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  47: {
+    compound: 47,
+    chaldeanName: "Grace Under Pressure (Expansion)",
+    meaning: "The same meaning as number 29. Uncertainties, treachery, and grief.",
+    isFavorable: false,
+    isPattern: false,
+    indaName: "Grace Under Pressure",
+    indaMeaning: "47 Has the same meaning as the number 29.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  48: {
+    compound: 48,
+    chaldeanName: "The Loner (Expansion)",
+    meaning: "The same meaning as number 30. Mental superiority; retreat from material market places.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "The Loner — Meditation",
+    indaMeaning: "48 Has the same meaning as the number 30.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  49: {
+    compound: 49,
+    chaldeanName: "The Recluse (Expansion)",
+    meaning: "The same meaning as number 31. Genius possibilities; rejection of world.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "The Recluse — the Hermit",
+    indaMeaning: "49 Has the same meaning as the number 31.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  50: {
+    compound: 50,
+    chaldeanName: "Diverse Success",
+    meaning: "Favorable for success through diversity of interests and quick adaptation.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "Communication & Adaptability",
+    indaMeaning: "50 Has the same meaning as the number 32.",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  51: {
+    compound: 51,
+    chaldeanName: "The Warrior",
+    meaning: "Strong potency associated with the nature of the warrior. Promises sudden advancement.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "The Warrior / Advancement",
+    indaMeaning: "This number possesses a strong potency of its own. It's associ- ated with the nature of the warrior, and promises sudden advance- ment in whatever one undertakes. It is especially favorable for those who need protection in military or naval life, and for the leaders of any",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  },
+  52: {
+    compound: 52,
+    chaldeanName: "The Cycle's End",
+    meaning: "The end of a long cycle where wisdom is attained. Indicates transitions.",
+    isFavorable: true,
+    isPattern: false,
+    indaName: "Revolution / Upheaval (Cycle End)",
+    indaMeaning: "52 Has the same meaning as the number 43. Notice that the Compound numbers end with the number 52. This is the reason given by the ancients. It's somewhat obtuse, but I didn't invent numerology, and since I've tested it, discovered that it",
+    positionContext: { asDestiny: "", asLifePath: "" }
+  }
+};

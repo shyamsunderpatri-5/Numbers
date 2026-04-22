@@ -1,0 +1,26 @@
+const fs = require('fs');
+
+const content = fs.readFileSync('scratch/inda-raw.txt', 'utf8');
+
+// Find the start of the book (after contents)
+const contentsIndex = content.indexOf("CONTENTS");
+const bodyText = content.substring(contentsIndex + 2000); // Skip some junk
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const found = {};
+
+numbers.forEach(n => {
+    // Search for patterns like "Single Numbers" or "Number 1" (case insensitive)
+    const pattern = new RegExp(`NUMBER\\s+${n}\\b`, 'i');
+    const match = bodyText.match(pattern);
+    if (match) {
+        found[n] = contentsIndex + 2000 + match.index;
+    }
+});
+
+const compoundMatch = bodyText.match(/COMPOUND\s+NUMBERS/i);
+if (compoundMatch) {
+    found["compounds"] = contentsIndex + 2000 + compoundMatch.index;
+}
+
+console.log(JSON.stringify(found, null, 2));

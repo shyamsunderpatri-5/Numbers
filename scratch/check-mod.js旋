@@ -1,0 +1,20 @@
+const fs = require('fs');
+const path = require('path');
+
+async function check() {
+    try {
+        const mod = require('pdf-parse');
+        console.log("Module keys:", Object.keys(mod));
+        if (mod.PDFParse) {
+            console.log("PDFParse found!");
+        } else if (typeof mod === 'function') {
+            console.log("Module is a function (v1 style)");
+        } else {
+            console.log("Module structure unknown:", typeof mod);
+        }
+    } catch (e) {
+        console.error("Require failed:", e.message);
+    }
+}
+
+check();
