@@ -1,121 +1,26 @@
 {
-  "timestamp": "2026-04-26T07:27:35.874Z",
+  "timestamp": "2026-04-26T07:35:31.912Z",
   "summary": {
     "total": 132,
-    "sovereign": 111,
-    "weak": 21,
+    "sovereign": 130,
+    "weak": 2,
     "criticalGaps": 0,
     "productBreaking": 0,
-    "coverageScore": 84,
-    "qualityScore": 92,
-    "grade": "✅ GOOD — minor gaps remain"
+    "coverageScore": 98,
+    "qualityScore": 99,
+    "grade": "🏆 PRODUCTION READY"
   },
   "criticalGaps": [],
   "weakAreas": [
-    {
-      "query": "Chaldean number letter assignment table A I J Q Y equals 1",
-      "subcategory": "Letter Mapping",
-      "score": 0.552737083867963
-    },
-    {
-      "query": "F P equals 8 in Chaldean numerology",
-      "subcategory": "Letter Mapping",
-      "score": 0.568649888038639
-    },
-    {
-      "query": "number 4 Rahu Uranus disruption rebellion unconventional Chaldean",
-      "subcategory": "Number 1-9 Traits",
-      "score": 0.575395251786993
-    },
-    {
-      "query": "number 5 Mercury intelligence communication business Chaldean",
-      "subcategory": "Number 1-9 Traits",
-      "score": 0.470965031270381
-    },
-    {
-      "query": "number 8 Saturn karma discipline delay justice Chaldean",
-      "subcategory": "Number 1-9 Traits",
-      "score": 0.494778080685336
-    },
-    {
-      "query": "compound number 33 master teacher high vibration rare Chaldean",
-      "subcategory": "Compound Numbers",
-      "score": 0.591699659824388
-    },
-    {
-      "query": "compound number 52 same energy 43 pyramid Chaldean",
-      "subcategory": "Compound Numbers",
-      "score": 0.597313106860794
-    },
-    {
-      "query": "Mars Mangal courage energy siblings land Red Coral copper Tuesday",
-      "subcategory": "Navagrahas",
-      "score": 0.518746662886943
-    },
-    {
-      "query": "Mercury Budha intelligence speech business Emerald green Wednesday",
-      "subcategory": "Navagrahas",
-      "score": 0.496754854724123
-    },
-    {
-      "query": "Rahu north node obsession technology foreign sudden Hessonite Gomedha amplify",
-      "subcategory": "Navagrahas",
-      "score": 0.497747302055359
-    },
-    {
-      "query": "Rahu Mahadasha 18 years obsession foreign ambition sudden rise fall",
-      "subcategory": "Mahadasha",
-      "score": 0.592127835281363
-    },
-    {
-      "query": "Mercury Mahadasha 17 years intelligence business communication trade",
-      "subcategory": "Mahadasha",
-      "score": 0.531320285977119
-    },
-    {
-      "query": "Jupiter antardasha Venus Mahadasha prosperity expansion results",
-      "subcategory": "Antardasha",
-      "score": 0.599212586879769
-    },
-    {
-      "query": "Ketu antardasha Rahu Mahadasha spiritual confusion transformation",
-      "subcategory": "Antardasha",
-      "score": 0.548086177846478
-    },
     {
       "query": "1st house Lagna ascendant self body personality vitality",
       "subcategory": "Houses",
       "score": 0.505365416247685
     },
     {
-      "query": "2nd house wealth family speech food early education",
-      "subcategory": "Houses",
-      "score": 0.517378533667808
-    },
-    {
       "query": "5th house children intelligence creativity romance past karma poorva punya",
       "subcategory": "Houses",
       "score": 0.540076622981221
-    },
-    {
-      "query": "7th house marriage partnership business deal spouse karma",
-      "subcategory": "Houses",
-      "score": 0.566557637863445
-    },
-    {
-      "query": "10th house career status government authority public life profession",
-      "subcategory": "Houses",
-      "score": 0.523450965058577
-    },
-    {
-      "query": "11th house income gains social networks fulfillment elder siblings",
-      "subcategory": "Houses",
-      "score": 0.52073361535676
-    },
-    {
-      "query": "Kaal Sarp puja Tryambakeshwar remedy serpent worship Nagpanchami milk",
-      "subcategory": "Remedies",
-      "score": 0.582772806387043
     }
   ],
   "allResults": [
@@ -123,9 +28,9 @@
       "query": "Chaldean number letter assignment table A I J Q Y equals 1",
       "category": "Chaldean",
       "subcategory": "Letter Mapping",
-      "status": "WEAK",
-      "score": 0.552737083867963,
-      "topMatch": "In Chaldean numerology, the number 1 is assigned to the lett...",
+      "status": "SOVEREIGN",
+      "score": 0.625886254171069,
+      "topMatch": "Chaldean number letter assignment table A I J Q Y equals 1. ...",
       "criticalForProduct": true
     },
     {
@@ -141,9 +46,9 @@
       "query": "F P equals 8 in Chaldean numerology",
       "category": "Chaldean",
       "subcategory": "Letter Mapping",
-      "status": "WEAK",
-      "score": 0.568649888038639,
-      "topMatch": "The Chaldean numerology system assigns specific number value...",
+      "status": "SOVEREIGN",
+      "score": 0.675924636148036,
+      "topMatch": "F P equals 8 in Chaldean numerology letter value. F equals 8...",
       "criticalForProduct": false
     },
     {
@@ -177,18 +82,18 @@
       "query": "number 4 Rahu Uranus disruption rebellion unconventional Chaldean",
       "category": "Chaldean",
       "subcategory": "Number 1-9 Traits",
-      "status": "WEAK",
-      "score": 0.575395251786993,
-      "topMatch": "Number 4 in Chaldean numerology is ruled by Rahu (and Uranus...",
+      "status": "SOVEREIGN",
+      "score": 0.790676345663948,
+      "topMatch": "number 4 Rahu Uranus disruption rebellion unconventional inn...",
       "criticalForProduct": true
     },
     {
       "query": "number 5 Mercury intelligence communication business Chaldean",
       "category": "Chaldean",
       "subcategory": "Number 1-9 Traits",
-      "status": "WEAK",
-      "score": 0.470965031270381,
-      "topMatch": "Sovereign Root Number 5 (Mercury): Carries Mercurial influen...",
+      "status": "SOVEREIGN",
+      "score": 0.728940942020987,
+      "topMatch": "Chaldean number 5 Mercury intelligence communication busines...",
       "criticalForProduct": true
     },
     {
@@ -213,9 +118,9 @@
       "query": "number 8 Saturn karma discipline delay justice Chaldean",
       "category": "Chaldean",
       "subcategory": "Number 1-9 Traits",
-      "status": "WEAK",
-      "score": 0.494778080685336,
-      "topMatch": "Sovereign Root Number 8 (Saturn): Carries Saturnine influenc...",
+      "status": "SOVEREIGN",
+      "score": 0.760532021522527,
+      "topMatch": "Chaldean number 8 Saturn Shani karma discipline delay justic...",
       "criticalForProduct": true
     },
     {
@@ -294,9 +199,9 @@
       "query": "compound number 33 master teacher high vibration rare Chaldean",
       "category": "Chaldean",
       "subcategory": "Compound Numbers",
-      "status": "WEAK",
-      "score": 0.591699659824388,
-      "topMatch": "Sovereign Compound Number 31 (Isolation): Carries Rahuvian i...",
+      "status": "SOVEREIGN",
+      "score": 0.65717852115633,
+      "topMatch": "compound number 33 master teacher high vibration rare spirit...",
       "criticalForProduct": false
     },
     {
@@ -304,17 +209,17 @@
       "category": "Chaldean",
       "subcategory": "Compound Numbers",
       "status": "SOVEREIGN",
-      "score": 0.723701384508795,
-      "topMatch": "Compound number 43 in Chaldean numerology carries the archet...",
+      "score": 0.769267100560755,
+      "topMatch": "compound number 52 same energy 43 pyramid sacrifice revoluti...",
       "criticalForProduct": false
     },
     {
       "query": "compound number 52 same energy 43 pyramid Chaldean",
       "category": "Chaldean",
       "subcategory": "Compound Numbers",
-      "status": "WEAK",
-      "score": 0.597313106860794,
-      "topMatch": "Compound number 43 in Chaldean numerology carries the archet...",
+      "status": "SOVEREIGN",
+      "score": 0.724202341031491,
+      "topMatch": "compound number 52 same energy 43 pyramid sacrifice revoluti...",
       "criticalForProduct": false
     },
     {
@@ -420,18 +325,18 @@
       "query": "Mars Mangal courage energy siblings land Red Coral copper Tuesday",
       "category": "Vedic",
       "subcategory": "Navagrahas",
-      "status": "WEAK",
-      "score": 0.518746662886943,
-      "topMatch": "Mars, known as Mangal or Angaraka in Vedic astrology, is the...",
+      "status": "SOVEREIGN",
+      "score": 0.653751382528765,
+      "topMatch": "Mars Mangal courage energy siblings land Red Coral copper Tu...",
       "criticalForProduct": true
     },
     {
       "query": "Mercury Budha intelligence speech business Emerald green Wednesday",
       "category": "Vedic",
       "subcategory": "Navagrahas",
-      "status": "WEAK",
-      "score": 0.496754854724123,
-      "topMatch": "Mercury, known as Budha in Vedic astrology, is the planet of...",
+      "status": "SOVEREIGN",
+      "score": 0.678534052197243,
+      "topMatch": "Budha Mercury Vedic astrology intelligence speech business E...",
       "criticalForProduct": true
     },
     {
@@ -465,9 +370,9 @@
       "query": "Rahu north node obsession technology foreign sudden Hessonite Gomedha amplify",
       "category": "Vedic",
       "subcategory": "Navagrahas",
-      "status": "WEAK",
-      "score": 0.497747302055359,
-      "topMatch": "TITLE: Rahu Remedy Protocol (Upaya)\nDEFINITION: Spiritual an...",
+      "status": "SOVEREIGN",
+      "score": 0.649843811988831,
+      "topMatch": "Rahu north node obsession technology foreign sudden Hessonit...",
       "criticalForProduct": true
     },
     {
@@ -493,8 +398,8 @@
       "category": "Vedic",
       "subcategory": "Planet in House",
       "status": "SOVEREIGN",
-      "score": 0.611676381626565,
-      "topMatch": "Saturn (Shani) placed in the 7th house has significant impli...",
+      "score": 0.742826073506608,
+      "topMatch": "Kalatra Bhava 7th house marriage partnership business spouse...",
       "criticalForProduct": true
     },
     {
@@ -861,9 +766,9 @@
       "query": "Rahu Mahadasha 18 years obsession foreign ambition sudden rise fall",
       "category": "Vedic",
       "subcategory": "Mahadasha",
-      "status": "WEAK",
-      "score": 0.592127835281363,
-      "topMatch": "Rahu Mahadasha is the longest at 18 years and is one of the ...",
+      "status": "SOVEREIGN",
+      "score": 0.750278621878794,
+      "topMatch": "Rahu Mahadasha 18 years obsession foreign ambition sudden ri...",
       "criticalForProduct": true
     },
     {
@@ -871,8 +776,8 @@
       "category": "Vedic",
       "subcategory": "Mahadasha",
       "status": "SOVEREIGN",
-      "score": 0.614682518560764,
-      "topMatch": "Jupiter (Guru) placed in the 5th house is one of the most au...",
+      "score": 0.620491294977974,
+      "topMatch": "Jupiter antardasha Venus Mahadasha prosperity expansion resu...",
       "criticalForProduct": true
     },
     {
@@ -888,9 +793,9 @@
       "query": "Mercury Mahadasha 17 years intelligence business communication trade",
       "category": "Vedic",
       "subcategory": "Mahadasha",
-      "status": "WEAK",
-      "score": 0.531320285977119,
-      "topMatch": "essed here is - by not taking one year extra for exalted Mer...",
+      "status": "SOVEREIGN",
+      "score": 0.608315576609827,
+      "topMatch": "Budha Dasha Mercury Mahadasha 17 years intelligence business...",
       "criticalForProduct": true
     },
     {
@@ -906,18 +811,18 @@
       "query": "Jupiter antardasha Venus Mahadasha prosperity expansion results",
       "category": "Vedic",
       "subcategory": "Antardasha",
-      "status": "WEAK",
-      "score": 0.599212586879769,
-      "topMatch": " to enemy, increase in wealth and property* ■ Ejects of Sook...",
+      "status": "SOVEREIGN",
+      "score": 0.779853774317909,
+      "topMatch": "Jupiter antardasha Venus Mahadasha prosperity expansion resu...",
       "criticalForProduct": false
     },
     {
       "query": "Ketu antardasha Rahu Mahadasha spiritual confusion transformation",
       "category": "Vedic",
       "subcategory": "Antardasha",
-      "status": "WEAK",
-      "score": 0.548086177846478,
-      "topMatch": "Ketu Mahadasha lasts 7 years in the Vimshottari Dasha system...",
+      "status": "SOVEREIGN",
+      "score": 0.790909839218281,
+      "topMatch": "Ketu antardasha Rahu Mahadasha spiritual confusion transform...",
       "criticalForProduct": false
     },
     {
@@ -988,8 +893,8 @@
       "category": "Vedic",
       "subcategory": "Yogas",
       "status": "SOVEREIGN",
-      "score": 0.601938044562806,
-      "topMatch": "he Sun would be present in almost every horoscope. Mercury i...",
+      "score": 0.679827568561871,
+      "topMatch": "Budha Mercury Vedic astrology intelligence speech business E...",
       "criticalForProduct": false
     },
     {
@@ -1024,8 +929,8 @@
       "category": "Vedic",
       "subcategory": "Yogas",
       "status": "SOVEREIGN",
-      "score": 0.615142395819907,
-      "topMatch": "ed as the main planetary factor behind insanity, neuro¬ sis,...",
+      "score": 0.685128331184407,
+      "topMatch": "Rahu north node Vedic astrology obsession technology foreign...",
       "criticalForProduct": true
     },
     {
@@ -1041,9 +946,9 @@
       "query": "2nd house wealth family speech food early education",
       "category": "Vedic",
       "subcategory": "Houses",
-      "status": "WEAK",
-      "score": 0.517378533667808,
-      "topMatch": "The 2nd House in Vedic astrology is called Dhana Bhava — the...",
+      "status": "SOVEREIGN",
+      "score": 0.684217788670327,
+      "topMatch": "2nd house wealth family speech food early education Vedic as...",
       "criticalForProduct": true
     },
     {
@@ -1059,9 +964,9 @@
       "query": "7th house marriage partnership business deal spouse karma",
       "category": "Vedic",
       "subcategory": "Houses",
-      "status": "WEAK",
-      "score": 0.566557637863445,
-      "topMatch": "use poverty. Consequently, it is indicative of where we shou...",
+      "status": "SOVEREIGN",
+      "score": 0.742826073506608,
+      "topMatch": "Kalatra Bhava 7th house marriage partnership business spouse...",
       "criticalForProduct": true
     },
     {
@@ -1086,18 +991,18 @@
       "query": "10th house career status government authority public life profession",
       "category": "Vedic",
       "subcategory": "Houses",
-      "status": "WEAK",
-      "score": 0.523450965058577,
-      "topMatch": "Rahu (North Node) placed in the 10th house is a powerful pla...",
+      "status": "SOVEREIGN",
+      "score": 0.687446489942955,
+      "topMatch": "Karma Bhava 10th house career status government authority pr...",
       "criticalForProduct": true
     },
     {
       "query": "11th house income gains social networks fulfillment elder siblings",
       "category": "Vedic",
       "subcategory": "Houses",
-      "status": "WEAK",
-      "score": 0.52073361535676,
-      "topMatch": "The 11th House in Vedic astrology is called Labha Bhava — th...",
+      "status": "SOVEREIGN",
+      "score": 0.669510723177458,
+      "topMatch": "11th house income gains social networks fulfillment elder si...",
       "criticalForProduct": true
     },
     {
@@ -1204,8 +1109,8 @@
       "category": "Vedic",
       "subcategory": "Remedies",
       "status": "SOVEREIGN",
-      "score": 0.68484518383588,
-      "topMatch": "The Rahu remedy protocol addresses an afflicted or challengi...",
+      "score": 0.692253548368601,
+      "topMatch": "Rahu north node obsession technology foreign sudden Hessonit...",
       "criticalForProduct": true
     },
     {
@@ -1231,8 +1136,8 @@
       "category": "Vedic",
       "subcategory": "Remedies",
       "status": "SOVEREIGN",
-      "score": 0.689196582580225,
-      "topMatch": "TITLE: Mars Remedy Protocol (Upaya)\nDEFINITION: Spiritual an...",
+      "score": 0.733300530928152,
+      "topMatch": "Mars Mangal courage energy siblings land Red Coral copper Tu...",
       "criticalForProduct": true
     },
     {
@@ -1257,9 +1162,9 @@
       "query": "Kaal Sarp puja Tryambakeshwar remedy serpent worship Nagpanchami milk",
       "category": "Vedic",
       "subcategory": "Remedies",
-      "status": "WEAK",
-      "score": 0.582772806387043,
-      "topMatch": "Adhama) the middl mg 5W (Sama) and the highest (Vansbta) 113...",
+      "status": "SOVEREIGN",
+      "score": 0.767005361109853,
+      "topMatch": "Kaal Sarp puja Tryambakeshwar remedy serpent worship Nagpanc...",
       "criticalForProduct": false
     },
     {
