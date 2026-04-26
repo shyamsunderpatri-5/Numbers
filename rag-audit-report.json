@@ -1,67 +1,26 @@
 {
-  "timestamp": "2026-04-26T06:59:52.517Z",
+  "timestamp": "2026-04-26T07:27:35.874Z",
   "summary": {
     "total": 132,
-    "sovereign": 98,
-    "weak": 29,
-    "criticalGaps": 5,
-    "productBreaking": 5,
-    "coverageScore": 74,
-    "qualityScore": 85,
-    "grade": "⚠️  ACCEPTABLE — needs improvement"
+    "sovereign": 111,
+    "weak": 21,
+    "criticalGaps": 0,
+    "productBreaking": 0,
+    "coverageScore": 84,
+    "qualityScore": 92,
+    "grade": "✅ GOOD — minor gaps remain"
   },
-  "criticalGaps": [
-    {
-      "query": "Mercury Mahadasha 17 years intelligence business communication trade",
-      "category": "Vedic",
-      "subcategory": "Mahadasha",
-      "score": 0.442287210089738,
-      "productBreaking": true
-    },
-    {
-      "query": "1st house Lagna ascendant self body personality vitality",
-      "category": "Vedic",
-      "subcategory": "Houses",
-      "score": 0.41680560011834,
-      "productBreaking": true
-    },
-    {
-      "query": "2nd house wealth family speech food early education",
-      "category": "Vedic",
-      "subcategory": "Houses",
-      "score": 0.262962302124171,
-      "productBreaking": true
-    },
-    {
-      "query": "7th house marriage partnership business deal spouse karma",
-      "category": "Vedic",
-      "subcategory": "Houses",
-      "score": 0.435294575200553,
-      "productBreaking": true
-    },
-    {
-      "query": "10th house career status government authority public life profession",
-      "category": "Vedic",
-      "subcategory": "Houses",
-      "score": 0.32506068498258,
-      "productBreaking": true
-    }
-  ],
+  "criticalGaps": [],
   "weakAreas": [
     {
       "query": "Chaldean number letter assignment table A I J Q Y equals 1",
       "subcategory": "Letter Mapping",
-      "score": 0.535660239199415
+      "score": 0.552737083867963
     },
     {
       "query": "F P equals 8 in Chaldean numerology",
       "subcategory": "Letter Mapping",
       "score": 0.568649888038639
-    },
-    {
-      "query": "number 2 Moon emotion intuition sensitivity Chaldean",
-      "subcategory": "Number 1-9 Traits",
-      "score": 0.593594109630235
     },
     {
       "query": "number 4 Rahu Uranus disruption rebellion unconventional Chaldean",
@@ -79,39 +38,19 @@
       "score": 0.494778080685336
     },
     {
-      "query": "compound number 16 shattered tower downfall ego Chaldean",
-      "subcategory": "Compound Numbers",
-      "score": 0.561285758210093
-    },
-    {
       "query": "compound number 33 master teacher high vibration rare Chaldean",
       "subcategory": "Compound Numbers",
       "score": 0.591699659824388
     },
     {
-      "query": "compound number 43 pyramid sacrifice revolutionary misunderstood",
-      "subcategory": "Compound Numbers",
-      "score": 0.531426541465168
-    },
-    {
       "query": "compound number 52 same energy 43 pyramid Chaldean",
       "subcategory": "Compound Numbers",
-      "score": 0.531426541465168
-    },
-    {
-      "query": "name correction inauspicious compound spelling adjustment lucky",
-      "subcategory": "Calculations",
-      "score": 0.583768812383649
-    },
-    {
-      "query": "Rahu Ketu friendly Saturn Venus enemy Sun Moon Mars",
-      "subcategory": "Planetary Friendship",
-      "score": 0.599631261891498
+      "score": 0.597313106860794
     },
     {
       "query": "Mars Mangal courage energy siblings land Red Coral copper Tuesday",
       "subcategory": "Navagrahas",
-      "score": 0.488202307867182
+      "score": 0.518746662886943
     },
     {
       "query": "Mercury Budha intelligence speech business Emerald green Wednesday",
@@ -119,29 +58,9 @@
       "score": 0.496754854724123
     },
     {
-      "query": "Jupiter Guru Brihaspati wisdom dharma children Yellow Sapphire Thursday",
-      "subcategory": "Navagrahas",
-      "score": 0.526286984733671
-    },
-    {
-      "query": "Saturn Shani karma discipline delay Blue Sapphire iron Saturday Sade Sati",
-      "subcategory": "Navagrahas",
-      "score": 0.585226644846638
-    },
-    {
       "query": "Rahu north node obsession technology foreign sudden Hessonite Gomedha amplify",
       "subcategory": "Navagrahas",
       "score": 0.497747302055359
-    },
-    {
-      "query": "Ketu south node past life spirituality Cat Eye moksha detachment liberation",
-      "subcategory": "Navagrahas",
-      "score": 0.584321980380423
-    },
-    {
-      "query": "Saturn exalted Libra debilitated Aries vedic",
-      "subcategory": "Exaltation",
-      "score": 0.535714523068523
     },
     {
       "query": "Rahu Mahadasha 18 years obsession foreign ambition sudden rise fall",
@@ -149,9 +68,9 @@
       "score": 0.592127835281363
     },
     {
-      "query": "Saturn Mahadasha 19 years karma discipline hard work delays reward",
+      "query": "Mercury Mahadasha 17 years intelligence business communication trade",
       "subcategory": "Mahadasha",
-      "score": 0.591019367636414
+      "score": 0.531320285977119
     },
     {
       "query": "Jupiter antardasha Venus Mahadasha prosperity expansion results",
@@ -164,9 +83,29 @@
       "score": 0.548086177846478
     },
     {
+      "query": "1st house Lagna ascendant self body personality vitality",
+      "subcategory": "Houses",
+      "score": 0.505365416247685
+    },
+    {
+      "query": "2nd house wealth family speech food early education",
+      "subcategory": "Houses",
+      "score": 0.517378533667808
+    },
+    {
       "query": "5th house children intelligence creativity romance past karma poorva punya",
       "subcategory": "Houses",
       "score": 0.540076622981221
+    },
+    {
+      "query": "7th house marriage partnership business deal spouse karma",
+      "subcategory": "Houses",
+      "score": 0.566557637863445
+    },
+    {
+      "query": "10th house career status government authority public life profession",
+      "subcategory": "Houses",
+      "score": 0.523450965058577
     },
     {
       "query": "11th house income gains social networks fulfillment elder siblings",
@@ -177,21 +116,6 @@
       "query": "Kaal Sarp puja Tryambakeshwar remedy serpent worship Nagpanchami milk",
       "subcategory": "Remedies",
       "score": 0.582772806387043
-    },
-    {
-      "query": "Tithi lunar day 30 per month auspicious inauspicious activities",
-      "subcategory": "Panchanga",
-      "score": 0.586994949878777
-    },
-    {
-      "query": "Brahma Muhurta auspicious time 96 minutes before sunrise new beginnings",
-      "subcategory": "Panchanga",
-      "score": 0.576623865071829
-    },
-    {
-      "query": "Amavasya new moon inauspicious ancestor worship Pitru",
-      "subcategory": "Panchanga",
-      "score": 0.555961214894279
     }
   ],
   "allResults": [
@@ -200,8 +124,8 @@
       "category": "Chaldean",
       "subcategory": "Letter Mapping",
       "status": "WEAK",
-      "score": 0.535660239199415,
-      "topMatch": "The Chaldean numerology system assigns specific number value...",
+      "score": 0.552737083867963,
+      "topMatch": "In Chaldean numerology, the number 1 is assigned to the lett...",
       "criticalForProduct": true
     },
     {
@@ -235,8 +159,8 @@
       "query": "number 2 Moon emotion intuition sensitivity Chaldean",
       "category": "Chaldean",
       "subcategory": "Number 1-9 Traits",
-      "status": "WEAK",
-      "score": 0.593594109630235,
+      "status": "SOVEREIGN",
+      "score": 0.613368052642586,
       "topMatch": "Number 2 in Chaldean numerology is ruled by the Moon (Chandr...",
       "criticalForProduct": true
     },
@@ -325,9 +249,9 @@
       "query": "compound number 16 shattered tower downfall ego Chaldean",
       "category": "Chaldean",
       "subcategory": "Compound Numbers",
-      "status": "WEAK",
-      "score": 0.561285758210093,
-      "topMatch": "Sovereign Compound Number 16 (Shattered Citadel): Carries Ne...",
+      "status": "SOVEREIGN",
+      "score": 0.633085382073425,
+      "topMatch": "Compound number 16 in Chaldean numerology carries the archet...",
       "criticalForProduct": true
     },
     {
@@ -379,9 +303,9 @@
       "query": "compound number 43 pyramid sacrifice revolutionary misunderstood",
       "category": "Chaldean",
       "subcategory": "Compound Numbers",
-      "status": "WEAK",
-      "score": 0.531426541465168,
-      "topMatch": "Sovereign Compound Number 30 (Mental Superiority): Carries J...",
+      "status": "SOVEREIGN",
+      "score": 0.723701384508795,
+      "topMatch": "Compound number 43 in Chaldean numerology carries the archet...",
       "criticalForProduct": false
     },
     {
@@ -389,8 +313,8 @@
       "category": "Chaldean",
       "subcategory": "Compound Numbers",
       "status": "WEAK",
-      "score": 0.531426541465168,
-      "topMatch": "Sovereign Compound Number 30 (Mental Superiority): Carries J...",
+      "score": 0.597313106860794,
+      "topMatch": "Compound number 43 in Chaldean numerology carries the archet...",
       "criticalForProduct": false
     },
     {
@@ -442,9 +366,9 @@
       "query": "name correction inauspicious compound spelling adjustment lucky",
       "category": "Chaldean",
       "subcategory": "Calculations",
-      "status": "WEAK",
-      "score": 0.583768812383649,
-      "topMatch": "TITLE: Chaldean Name Correction (Sovereign Authority)\nDEFINI...",
+      "status": "SOVEREIGN",
+      "score": 0.670747398600477,
+      "topMatch": "Name correction in Chaldean numerology is the systematic pro...",
       "criticalForProduct": true
     },
     {
@@ -469,9 +393,9 @@
       "query": "Rahu Ketu friendly Saturn Venus enemy Sun Moon Mars",
       "category": "Chaldean",
       "subcategory": "Planetary Friendship",
-      "status": "WEAK",
-      "score": 0.599631261891498,
-      "topMatch": "The Chaldean-Vedic planetary friendship table is essential f...",
+      "status": "SOVEREIGN",
+      "score": 0.67873314872585,
+      "topMatch": "Rahu and Ketu, the shadow nodes of the Moon, have their own ...",
       "criticalForProduct": false
     },
     {
@@ -497,8 +421,8 @@
       "category": "Vedic",
       "subcategory": "Navagrahas",
       "status": "WEAK",
-      "score": 0.488202307867182,
-      "topMatch": "TITLE: Mars Remedy Protocol (Upaya)\nDEFINITION: Spiritual an...",
+      "score": 0.518746662886943,
+      "topMatch": "Mars, known as Mangal or Angaraka in Vedic astrology, is the...",
       "criticalForProduct": true
     },
     {
@@ -514,9 +438,9 @@
       "query": "Jupiter Guru Brihaspati wisdom dharma children Yellow Sapphire Thursday",
       "category": "Vedic",
       "subcategory": "Navagrahas",
-      "status": "WEAK",
-      "score": 0.526286984733671,
-      "topMatch": "TITLE: Jupiter Remedy Protocol (Upaya)\nDEFINITION: Spiritual...",
+      "status": "SOVEREIGN",
+      "score": 0.641044450117485,
+      "topMatch": "Jupiter, known as Guru or Brihaspati in Vedic astrology, is ...",
       "criticalForProduct": true
     },
     {
@@ -532,9 +456,9 @@
       "query": "Saturn Shani karma discipline delay Blue Sapphire iron Saturday Sade Sati",
       "category": "Vedic",
       "subcategory": "Navagrahas",
-      "status": "WEAK",
-      "score": 0.585226644846638,
-      "topMatch": "Sade Sati is the 7.5-year period during which Saturn transit...",
+      "status": "SOVEREIGN",
+      "score": 0.632724720566126,
+      "topMatch": "Saturn, known as Shani or Shanaischaraya in Vedic astrology,...",
       "criticalForProduct": true
     },
     {
@@ -550,9 +474,9 @@
       "query": "Ketu south node past life spirituality Cat Eye moksha detachment liberation",
       "category": "Vedic",
       "subcategory": "Navagrahas",
-      "status": "WEAK",
-      "score": 0.584321980380423,
-      "topMatch": " occult in life. Positive Sides of Rahu and Ketu On the posi...",
+      "status": "SOVEREIGN",
+      "score": 0.655756356282896,
+      "topMatch": "Ketu, the South Node of the Moon, represents the tail of the...",
       "criticalForProduct": true
     },
     {
@@ -640,9 +564,9 @@
       "query": "Saturn exalted Libra debilitated Aries vedic",
       "category": "Vedic",
       "subcategory": "Exaltation",
-      "status": "WEAK",
-      "score": 0.535714523068523,
-      "topMatch": "f-knowledge, the astrologer, even if he can perceive the pow...",
+      "status": "SOVEREIGN",
+      "score": 0.646373845096513,
+      "topMatch": "Saturn achieves its highest dignity — exaltation (Uccha) — i...",
       "criticalForProduct": false
     },
     {
@@ -955,18 +879,18 @@
       "query": "Saturn Mahadasha 19 years karma discipline hard work delays reward",
       "category": "Vedic",
       "subcategory": "Mahadasha",
-      "status": "WEAK",
-      "score": 0.591019367636414,
-      "topMatch": "Saturn Mahadasha is the second longest at 19 years and repre...",
+      "status": "SOVEREIGN",
+      "score": 0.60972757455441,
+      "topMatch": "Saturn Mahadasha (Shani Dasha) is the second longest period ...",
       "criticalForProduct": true
     },
     {
       "query": "Mercury Mahadasha 17 years intelligence business communication trade",
       "category": "Vedic",
       "subcategory": "Mahadasha",
-      "status": "CRITICAL_GAP",
-      "score": 0.442287210089738,
-      "topMatch": "Mercury Mahadasha lasts 17 years in the Vimshottari Dasha sy...",
+      "status": "WEAK",
+      "score": 0.531320285977119,
+      "topMatch": "essed here is - by not taking one year extra for exalted Mer...",
       "criticalForProduct": true
     },
     {
@@ -1108,18 +1032,18 @@
       "query": "1st house Lagna ascendant self body personality vitality",
       "category": "Vedic",
       "subcategory": "Houses",
-      "status": "CRITICAL_GAP",
-      "score": 0.41680560011834,
-      "topMatch": "how excessive spending, harsh speech, or excessive self-expr...",
+      "status": "WEAK",
+      "score": 0.505365416247685,
+      "topMatch": " Father Chandra Moon d Matru Mother Angaraka Mars a Bhratru ...",
       "criticalForProduct": true
     },
     {
       "query": "2nd house wealth family speech food early education",
       "category": "Vedic",
       "subcategory": "Houses",
-      "status": "CRITICAL_GAP",
-      "score": 0.262962302124171,
-      "topMatch": "ability to provide for ourselves in life. It does not indica...",
+      "status": "WEAK",
+      "score": 0.517378533667808,
+      "topMatch": "The 2nd House in Vedic astrology is called Dhana Bhava — the...",
       "criticalForProduct": true
     },
     {
@@ -1135,9 +1059,9 @@
       "query": "7th house marriage partnership business deal spouse karma",
       "category": "Vedic",
       "subcategory": "Houses",
-      "status": "CRITICAL_GAP",
-      "score": 0.435294575200553,
-      "topMatch": "Saturn (Shani) placed in the 7th house has significant impli...",
+      "status": "WEAK",
+      "score": 0.566557637863445,
+      "topMatch": "use poverty. Consequently, it is indicative of where we shou...",
       "criticalForProduct": true
     },
     {
@@ -1162,9 +1086,9 @@
       "query": "10th house career status government authority public life profession",
       "category": "Vedic",
       "subcategory": "Houses",
-      "status": "CRITICAL_GAP",
-      "score": 0.32506068498258,
-      "topMatch": "ules, though it may not be so for the Ascendant or the chart...",
+      "status": "WEAK",
+      "score": 0.523450965058577,
+      "topMatch": "Rahu (North Node) placed in the 10th house is a powerful pla...",
       "criticalForProduct": true
     },
     {
@@ -1271,8 +1195,8 @@
       "category": "Vedic",
       "subcategory": "Remedies",
       "status": "SOVEREIGN",
-      "score": 0.66492052836552,
-      "topMatch": "TITLE: Jupiter Remedy Protocol (Upaya)\nDEFINITION: Spiritual...",
+      "score": 0.705120528354728,
+      "topMatch": "Jupiter, known as Guru or Brihaspati in Vedic astrology, is ...",
       "criticalForProduct": true
     },
     {
@@ -1351,27 +1275,27 @@
       "query": "Tithi lunar day 30 per month auspicious inauspicious activities",
       "category": "Vedic",
       "subcategory": "Panchanga",
-      "status": "WEAK",
-      "score": 0.586994949878777,
-      "topMatch": "tion. The followers of Sama Veda observe it when the Moon is...",
+      "status": "SOVEREIGN",
+      "score": 0.610732702801752,
+      "topMatch": "Tithi is the lunar day and forms one of the five essential l...",
       "criticalForProduct": true
     },
     {
       "query": "Brahma Muhurta auspicious time 96 minutes before sunrise new beginnings",
       "category": "Vedic",
       "subcategory": "Panchanga",
-      "status": "WEAK",
-      "score": 0.576623865071829,
-      "topMatch": " (i.e. 60 minutes of time) from mid-day or from mid-night is...",
+      "status": "SOVEREIGN",
+      "score": 0.725701353719897,
+      "topMatch": "Brahma Muhurta is the most auspicious time window in Vedic a...",
       "criticalForProduct": true
     },
     {
       "query": "Amavasya new moon inauspicious ancestor worship Pitru",
       "category": "Vedic",
       "subcategory": "Panchanga",
-      "status": "WEAK",
-      "score": 0.555961214894279,
-      "topMatch": "isit shrines. If the Moon is in Gamaiiavastha, with decreasi...",
+      "status": "SOVEREIGN",
+      "score": 0.68920687565722,
+      "topMatch": "Amavasya is the New Moon day — the 30th and final Tithi of t...",
       "criticalForProduct": false
     },
     {

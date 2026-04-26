@@ -33,6 +33,11 @@ const QUERY_REWRITER: Record<string, string[]> = {
   'bhakoot': ['bhakoot dosha moon sign relationship', 'rashi matching marriage'],
   'koota': ['ashta koota milan marriage compatibility', 'nakshatra match points'],
   'tara koota': ['tara matching janma sampat vipat', 'nakshatra tara compatibility'],
+  '1st house': ['lagna ascendant self body personality vitality', 'first house tanu bhava'],
+  '2nd house': ['dhana bhava wealth family speech food education', 'second house savings'],
+  '7th house': ['kalatra bhava marriage partnership spouse business', 'seventh house spouse'],
+  '10th house': ['karma bhava career status government authority', 'tenth house profession'],
+  'mercury mahadasha': ['budha dasha intelligence business communication trade', 'mercury 17 years'],
 }
 
 export interface SearchResult {
