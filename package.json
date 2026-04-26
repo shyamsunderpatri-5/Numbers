@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run safety-audit && next build",
+    "build": "next build",
+    "prebuild": "npx tsx scripts/rag-guard.ts",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "safety-audit": "tsx scripts/run-safety-audit.ts"
+    "safety-audit": "npx tsx scripts/rag-master-audit.ts",
+    "lock-baseline": "npx tsx scripts/lock-rag-baseline.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
