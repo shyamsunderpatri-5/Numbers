@@ -40,11 +40,33 @@ To eliminate AI hallucinations, all core values are calculated *before* the AI i
 
 ### 💠 Service Gateway (`/src/lib/engine/service`)
 - **`astro-numerology-service.ts`**: The master orchestrator.
-    - 1. Calculates Math -> 2. Retrieves RAG -> 3. Builds Prompt -> 4. Returns Fused Response.
+- **`panchang-service.ts`**: Orchestrates astronomical calculations with caching.
+- **`compatibility-service.ts`**: Fuses Vedic koota matching with Chaldean logic.
 
 ---
 
-## 📊 3. RAG CORE & SOVEREIGNTY STATUS
+## 🏗️ 3. EXTENSION FEATURES (v2.0)
+
+### 🪐 Panchang Engine
+- **Logic**: Precise Tithi, Nakshatra, Yoga, and Vara calculation using `astronomia`.
+- **Accuracy**: Calculates relative to local sunrise (City-specific).
+- **Caching**: Supabase-backed month-by-month calculation cache.
+
+### 💍 Vivah Muhurta (Marriage Finder)
+- **Scanning**: Multi-month almanac scanning for auspicious windows.
+- **Rules**: Hard-coded enforcement of traditional Vedic marriage timing constraints.
+
+### 💑 Kundali Matching (Ashtakoota)
+- **Scoring**: Traditional 36-point system covering 8 core kootas.
+- **Dosha Analysis**: Automated detection of Nadi, Bhakoot, and Gana doshas.
+
+### 🔮 Deep Oracle
+- **Investigation**: Multi-step reasoning process (Intent -> Assemble -> Retrieve -> Synthesize).
+- **Format**: Structured JSON investigation reports instead of chat-style dialogue.
+
+---
+
+## 📊 4. RAG CORE & SOVEREIGNTY STATUS
 
 Our knowledge base is purified of "Western Contamination" and locked at a production-ready baseline.
 
@@ -69,12 +91,15 @@ We use a **4-Layer Lock** to prevent regression:
 
 ---
 
-## 🚀 5. CURRENT PROGRESS (v1.1)
+## 🚀 6. CURRENT PROGRESS (v2.0)
 - [x] **Math Engine**: Fully deterministic (Chaldean/Vedic).
 - [x] **RAG Knowledge**: 98% coverage achieved and locked.
-- [x] **Query Expansion**: Vocabulary bridge implemented.
-- [x] **CI/CD Guard**: Build protection enabled.
-- [ ] **UI Integration**: Next step — connect Chat UI to the Service Gateway.
+- [x] **Panchang Engine**: 100-year local sunrise almanac implemented.
+- [x] **Marriage Finder**: Vivah Muhurta discovery engine ready.
+- [x] **Kundali Match**: 36-point Ashtakoota system active.
+- [x] **Deep Oracle**: Structured investigation engine deployed.
+- [x] **WhatsApp Daily**: Twilio-integrated forecast system ready.
+- [x] **UI Pages**: Responsive dashboards for all 4 expansion features.
 
 ---
 *Developed for NUMERIQ.AI by Sovereign Intelligence Engineering*
