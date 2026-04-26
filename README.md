@@ -1,21 +1,23 @@
 # 🔯 NUMERIQ.AI — SOVEREIGN INTELLIGENCE ENGINE v1.1
-### FULL ARCHITECTURAL SPECIFICATION (HLD/LLD)
+### FULL ARCHITECTURAL SPECIFICATION (HLD/LLD) & RAG BASELINE
 
-This document serves as the master blueprint for the NUMERIQ.AI Astro-Numerology Fusion Platform. It is designed for maximum clarity for both human engineers and AI systems.
+This document is the "Source of Truth" for the NUMERIQ.AI platform. It defines the mathematical, semantic, and structural boundaries of our Chaldean-Vedic fusion engine.
 
 ---
 
 ## 🏗️ 1. HIGH-LEVEL DESIGN (HLD)
 
-### A. Core Architecture: The "Sovereign Equation"
-Identity (Chaldean) + Timing (Vedic) = Action (Synthesis).
-The system is built as a **Tri-Layer Architecture**:
-1.  **Deterministic Layer (Math):** TypeScript-based utilities for calculations.
-2.  **Intelligence Layer (RAG):** Context-aware vector retrieval from 132+ expert scenarios.
-3.  **Synthesis Layer (Orchestration):** LLM-based fusion with strict systemic guardrails.
+### A. The "Sovereign Equation"
+**Identity (Chaldean Numerology) + Timing (Vedic Astrology) = Action (Sovereign Synthesis).**
+NUMERIQ.AI does not "generate" numerology; it **calculates** it via a deterministic math engine and **interprets** it via an expert-purified RAG system.
 
-### B. The Hard Input Contract
-To eliminate AI hallucination, the system calculates all core values *before* the AI is prompted. This data is injected as a **Deterministic Math Contract** (JSON-like structure) that the AI is strictly forbidden from recalculating.
+### B. Tri-Layer Architecture
+1.  **Deterministic Layer (Math):** TypeScript utilities that perform Chaldean name-value mapping and Vedic Dasha calculations. This layer is the "Truth Provider."
+2.  **Intelligence Layer (RAG):** A dual-silo vector database (`Xenova/all-MiniLM-L6-v2`) containing 132+ expert scenarios. It uses **Query Expansion** to bridge user language to expert terminology.
+3.  **Synthesis Layer (Orchestration):** Fuses math data and RAG context into a cohesive narrative using a "Jyotish-Guru" persona.
+
+### C. The Hard Input Contract
+To eliminate AI hallucinations, all core values are calculated *before* the AI is engaged. The AI is strictly forbidden from recalculating math; it must accept the **Math Contract** as absolute truth.
 
 ---
 
@@ -23,69 +25,56 @@ To eliminate AI hallucination, the system calculates all core values *before* th
 
 ### 💠 Logic Component (`/src/lib/engine/logic`)
 - **`calculator-utils.ts`**: 
-    - **`calculateNameNumber`**: Implements Chaldean breakdown. Rules: Word-by-word summation. **Sacred 9 Rule:** No letter is assigned 9 (sacred vibration).
-    - **`calculateBirthNumber`**: Reduces birth day to root digit (1-9).
-    - **`calculateDestinyNumber`**: Sums full DOB (D+M+Y) to root digit.
-    - **`validateDOB`**: Regex-based strict date validation (detects Feb 30, April 31 errors).
+    - **Name Calculation**: Word-by-word summation using the **Sacred 9 Rule** (number 9 is never assigned to a letter).
+    - **Date Validation**: Strict regex and logic to prevent illegal dates (e.g., Feb 30).
+    - **Vedic Engine**: 120-year Vimshottari Mahadasha and Antardasha calculation.
+
+### 💠 Retrieval Component (`/src/lib/engine/retrieval`)
+- **`sovereign-retrieval.ts`**: 
+    - **Sovereign Bridge**: Implements query expansion (e.g., "Personality" -> "1st House Lagna").
+    - **Multi-Probe Search**: Searches both Chaldean and Vedic silos and re-ranks results by semantic relevance.
 
 ### 💠 Synthesis Component (`/src/lib/engine/synthesis`)
-- **`master-response-orchestrator.ts`**:
-    - **Planetary Friendship Matrix**: Encodes 9x9 Vedic friendship relations (Sun-Saturn enmity, Venus-Mercury friendship, etc.).
-    - **`FusionContext`**: Synthesizes math data with the current Vara (day ruler) and Mahadasha to create a "Fusion Score."
+- **`master-system-prompt.ts`**: Defines the "Jyotish-Guru" persona, enforcing Sanskrit terminology and redacting non-sovereign (Pythagorean) terms.
+- **`planetary-matrix.ts`**: Encodes the 9x9 Vedic friendship/enmity rules.
 
-### 💠 Intelligence Component (`/src/lib/engine/intelligence`)
-- **`master-system-prompt.ts`**: The "Jyotish-Guru" persona. Hard-coded rules for Sanskrit terminology and tone.
-- **`prompt-designer.ts`**:
-    - **Query Sanitization**: Regex scrubbers for forbidden Pythagorean terms ("Life Path", "Expression Number").
-    - **Category Routing**: Specific context injection for Career vs. Marriage vs. Finance.
-
-### 💠 Service Component (`/src/lib/engine/service`)
-- **`astro-numerology-service.ts`**: The central API gateway. Orchestrates math, RAG retrieval, and response formatting into the "Golden Structure."
+### 💠 Service Gateway (`/src/lib/engine/service`)
+- **`astro-numerology-service.ts`**: The master orchestrator.
+    - 1. Calculates Math -> 2. Retrieves RAG -> 3. Builds Prompt -> 4. Returns Fused Response.
 
 ---
 
-## 📚 3. RAG INVENTORY (KNOWLEDGE BASE)
-Our database (`library_embeddings` & `vedic_library_embeddings`) contains **43+ High-Density Rich Semantic Packets** (150-220 words each). 
+## 📊 3. RAG CORE & SOVEREIGNTY STATUS
 
-### ✅ Hydrated Topics:
-1.  **Chaldean Fundamentals:** 1-52 Compound Archetypes, Letter-to-Number mapping, Sacred 9 Philosophy.
-2.  **Identity Traits:** Root 1 (Sun) through Root 9 (Mars) comprehensive personalities.
-3.  **Timing (Vedic):** All 9 Mahadasha cycles (Sun 6y, Rahu 18y, Saturn 19y, etc.).
-4.  **Relationship (Koota):** Ashta Koota Milan (36-point system), Nadi Dosha, Gana Koota, Bhakoot Koota.
-5.  **Panchanga:** Tithi (Lunar Days), Amavasya (New Moon) Ancestor Worship, Brahma Muhurta.
-6.  **Remedies:** Planetary Mantras, Gemstones (Ruby, Emerald, Blue Sapphire), Charity Protocols.
-7.  **Yogas:** Kaal Sarp Yoga detection, Neecha Bhanga Raja Yoga (Rise from Weakness).
-8.  **Houses (Bhavas):** Full 12-house significations (v3 high-density injection).
+Our knowledge base is purified of "Western Contamination" and locked at a production-ready baseline.
 
-### 💠 Retrieval Logic: The Sovereign Bridge
-- **`sovereign-retrieval.ts`**: Implements **Query Expansion** (Vocabulary Bridge). 
-- Automatically maps keywords like "Lagna" to "1st House" and "Budha Dasha" to "Mercury Mahadasha" before vector search, ensuring 100% retrieval success even for brief user queries.
+- **Coverage Score**: **98%** (Locked in `rag-baseline.json`)
+- **Quality Score**: **99%**
+- **Sovereignty Check**: **PASS** — Zero presence of "Life Path" or "Pythagorean" logic.
+- **Maintenance**: **CI Guard Active**. The build will **FAIL** if retrieval quality regresses below 95%.
+
+### ✅ Fully Hydrated Domains:
+- **Chaldean**: Letter-to-Number Table, 1-52 Compound Archetypes, Root 1-9 Personalities.
+- **Vedic**: Navagrahas, All Mahadashas/Antardashas, 12 Houses (Bhavas), Panchanga, Koota Matching.
+- **Remedies**: Planetary Mantras, Gemstone Protocols, Charity timing.
 
 ---
 
-## 📊 4. SYSTEM INTEGRITY & AUDIT
-- **RAG Audit Score:** **0 CRITICAL GAPS** — All 132 core scenarios pass production readiness.
-- **Sovereignty Check:** PASS — AI is blocked from using Western/Pythagorean terms.
-- **Data Integrity:** PASS — Math Contract verified for Meera Pillai (34/7) and Suresh Kumar (39/3).
+## 🔒 4. SAFETY & LOCKING STRATEGY
+We use a **4-Layer Lock** to prevent regression:
+1.  **`rag-baseline.json`**: The immutable snapshot of current expert performance.
+2.  **`scripts/rag-guard.ts`**: A build-gate that runs 10 critical spot-checks before every deployment.
+3.  **Git Tags**: Versioned releases (e.g., `rag-v1.0`) ensuring traceability.
+4.  **`npm run safety-audit`**: Full 132-scenario audit suite for manual validation.
 
 ---
 
-## ⚖️ 5. THE GOLDEN RESPONSE STRUCTURE
-Every output follows this exact hierarchy:
-1.  🔢 **Numerology Insight**: Archetypal meaning of the Compound and Root numbers.
-2.  🔯 **Astrology Insight**: Analysis of the current **Vimshottari Mahadasha**.
-3.  ⚖️ **Combined Interpretation**: Synergy/Conflict between Name Planet and Dasha Planet.
-4.  📌 **Practical Guidance**: Actionable remedies (Mantra, Gem, Color).
-5.  ⏳ **Timing**: Exact periods for successful action.
+## 🚀 5. CURRENT PROGRESS (v1.1)
+- [x] **Math Engine**: Fully deterministic (Chaldean/Vedic).
+- [x] **RAG Knowledge**: 98% coverage achieved and locked.
+- [x] **Query Expansion**: Vocabulary bridge implemented.
+- [x] **CI/CD Guard**: Build protection enabled.
+- [ ] **UI Integration**: Next step — connect Chat UI to the Service Gateway.
 
 ---
-
-## 🚀 6. CURRENT DEVELOPED FEATURES
-- [x] **Deterministic Math Engine**: Name, Birth, Destiny, Personal Year/Month/Day.
-- [x] **Fusion Intelligence**: Planetary Friendship detection.
-- [x] **Marriage Compatibility**: 36-point Koota + Chaldean harmony.
-- [x] **Name Architect**: Auspicious spelling adjustment logic.
-- [x] **Query Sanitization**: Auto-redaction of non-sovereign terms.
-
----
-*Developed by Sovereign Intelligence Engineering for NUMERIQ.AI*
+*Developed for NUMERIQ.AI by Sovereign Intelligence Engineering*
