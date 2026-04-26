@@ -4,24 +4,26 @@
  */
 
 import { NumberQuality } from "./types";
-import { NUMBERS_1_9 } from "./knowledge/numbers-1-9";
-import { COMPOUNDS_10_52 } from "./knowledge/compounds-10-52";
+import { NUMBER_KNOWLEDGE } from "./knowledge/numbers-1-9";
+import { COMPOUND_MEANINGS } from "./knowledge/compounds-10-52";
 
 export function getNumberQuality(num: number): NumberQuality {
   // Check Compounds 10-52
-  if (COMPOUNDS_10_52[num]) {
-    return COMPOUNDS_10_52[num].quality;
+  if (COMPOUND_MEANINGS[num]) {
+    return COMPOUND_MEANINGS[num].isFavorable ? 'favorable' : 'challenging';
   }
 
   // Check Singles 1-9
-  if (num >= 1 && num <= 9) {
-    // Cheiro treats 4 and 8 as 'challenging' or 'unfortunate' in worldly matters
-    if (num === 4 || num === 8) return 'challenging';
-    return 'favorable';
+  if (NUMBER_KNOWLEDGE[num]) {
+    return NUMBER_KNOWLEDGE[num].quality;
   }
 
   // For others, reduce and check core vibration
   const reduced = reduceNumber(num);
+  if (NUMBER_KNOWLEDGE[reduced]) {
+    return NUMBER_KNOWLEDGE[reduced].quality;
+  }
+  
   if (reduced === 4 || reduced === 8) return 'challenging';
   return 'favorable';
 }
@@ -43,13 +45,13 @@ export function getQualityExplanation(num: number): string {
   const quality = getNumberQuality(num);
   
   // If it's a compound, return the extracted meaning
-  if (COMPOUNDS_10_52[num]) {
-    return COMPOUNDS_10_52[num].meaning;
+  if (COMPOUND_MEANINGS[num]) {
+    return COMPOUND_MEANINGS[num].meaning;
   }
 
   // If it's a root number, return advice from knowledge base
-  if (NUMBERS_1_9[num]) {
-    return NUMBERS_1_9[num].character.join(". ");
+  if (NUMBER_KNOWLEDGE[num]) {
+    return NUMBER_KNOWLEDGE[num].coreMeaning;
   }
 
   switch (quality) {

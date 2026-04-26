@@ -20,11 +20,17 @@ import {
   Compass,
   Loader2,
   ArrowDownCircle,
-  ChevronRight
+  ChevronRight,
+  Lock,
+  CalendarDays,
+  ArrowRight
 } from 'lucide-react';
 import { AIParsedReading } from '@/lib/numerology/types';
 import { NumericalFingerprint } from './NumericalFingerprint';
 import { StrategicGuidance } from './StrategicGuidance';
+import { ShareCard } from './ShareCard';
+import { createClient } from '@/lib/supabase/client';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -36,6 +42,7 @@ interface ReadingResultViewProps {
 export const ReadingResultView: React.FC<ReadingResultViewProps> = ({ reading }) => {
   const [isExporting, setIsExporting] = React.useState(false);
   const [profile, setProfile] = React.useState<any>(null);
+  const supabase = createClient();
   const { mathData, knowledgeContext } = reading;
 
   React.useEffect(() => {
@@ -195,17 +202,91 @@ export const ReadingResultView: React.FC<ReadingResultViewProps> = ({ reading })
                   <h3 className="text-2xl font-bold text-white tracking-tight flex items-center gap-3 font-['Playfair_Display']">
                      Destiny <span className="text-amber-500">Convergence.</span>
                   </h3>
-                  <div className="text-zinc-400 text-lg leading-relaxed first-letter:text-5xl first-letter:font-serif first-letter:text-amber-500 first-letter:mr-2 first-letter:float-left whitespace-pre-wrap">
-                    {reading.destinyAnalysis}
+                  <div className={cn(
+                    "text-zinc-400 text-lg leading-relaxed first-letter:text-5xl first-letter:font-serif first-letter:text-amber-500 first-letter:mr-2 first-letter:float-left whitespace-pre-wrap",
+                    !isPro && "relative"
+                  )}>
+                    {isPro ? (
+                      reading.destinyAnalysis
+                    ) : (
+                      <>
+                        <p className="text-white font-bold mb-4">"There is a pattern in your vibrational signature that most people misuse—often leading to the exact structural block you are currently facing..."</p>
+                        <div className="mt-4 blur-md select-none opacity-40 pointer-events-none">
+                          {reading.destinyAnalysis}
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center pt-24">
+                          <Link href="/dashboard/billing" className="px-10 py-5 bg-white text-black rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-primary transition-all shadow-[0_0_50px_rgba(255,255,255,0.2)] active:scale-95">
+                             Access My Full Protocol
+                          </Link>
+                        </div>
+                      </>
+                    )}
                   </div>
                </div>
 
-               <div className="space-y-4 pt-10 border-t border-zinc-900">
-                  <h3 className="text-2xl font-bold text-white tracking-tight flex items-center gap-3 font-['Playfair_Display']">
-                     Life Path <span className="text-amber-500">Trajectory.</span>
-                  </h3>
-                  <div className="text-zinc-400 text-lg leading-relaxed whitespace-pre-wrap">
-                    {reading.lifePathAnalysis}
+               {isPro && (
+                 <div className="space-y-4 pt-10 border-t border-zinc-900">
+                    <h3 className="text-2xl font-bold text-white tracking-tight flex items-center gap-3 font-['Playfair_Display']">
+                       Life Path <span className="text-amber-500">Trajectory.</span>
+                    </h3>
+                    <div className="text-zinc-400 text-lg leading-relaxed whitespace-pre-wrap">
+                      {reading.lifePathAnalysis}
+                    </div>
+                 </div>
+               )}
+            </div>
+
+            {/* Share Card Integration */}
+            <div className="pt-20 space-y-10">
+               <div className="flex items-center gap-4">
+                  <span className="text-primary text-[10px] font-black uppercase tracking-[0.4em]">Identity Signal</span>
+                  <div className="h-[1px] flex-1 bg-zinc-900" />
+               </div>
+               <div className="text-center space-y-2">
+                  <h3 className="text-3xl font-serif font-black italic">Most people misunderstand you.</h3>
+                  <p className="text-zinc-500 text-sm font-medium italic">"This pattern is misunderstood more than any other."</p>
+               </div>
+               <ShareCard 
+                 name={profile?.full_name || "Your Signature"} 
+                 number={mathData.destinyNumber} 
+                 archetype={mathData.destinyNumber === 7 ? "The Seeker" : mathData.destinyNumber === 1 ? "The Leader" : mathData.destinyCompound.toString()} 
+                 tagline={`Most people never understand a ${mathData.destinyNumber}. That's why they never unlock what you already carry.`}
+               />
+            </div>
+
+            {/* RETURN LOOP: Tomorrow's Revelation */}
+            <div className="pt-20">
+               <div className="glass-card p-10 rounded-[3rem] border-primary/20 bg-primary/5 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 p-10 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
+                     <CalendarDays className="w-48 h-48 text-primary" />
+                  </div>
+                  <div className="relative z-10 space-y-6 text-center md:text-left">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[9px] font-black uppercase tracking-widest text-primary">
+                        The Next Sequence
+                     </div>
+                     <div className="space-y-3">
+                        <h3 className="text-3xl font-serif font-black italic">"You've only seen how this affects you."</h3>
+                        <p className="text-zinc-500 max-w-xl text-lg font-medium leading-relaxed italic">
+                           "Your next layer is already forming. It becomes clearer the more you engage with your core vibration."
+                        </p>
+                     </div>
+                     <div className="flex flex-col md:flex-row items-center gap-6">
+                        <Link 
+                           href="/dashboard/forecasts?focus=tomorrow"
+                           className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-[10px] font-black uppercase tracking-widest text-zinc-400 hover:text-primary hover:border-primary/20 transition-all"
+                        >
+                           Preview Formation <ArrowRight className="w-4 h-4" />
+                        </Link>
+                        <div className="flex items-center gap-4">
+                           <div className="flex items-center gap-3">
+                              <span className="text-[10px] font-black text-zinc-600 uppercase tracking-widest">Resonance Peak:</span>
+                              <span className="text-sm font-black text-primary font-mono tracking-tighter italic">Building...</span>
+                           </div>
+                           <button className="text-[10px] font-black text-white/20 uppercase tracking-widest hover:text-primary transition-colors border-l border-white/5 pl-4">
+                              Stabilize Now
+                           </button>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>

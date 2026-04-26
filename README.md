@@ -1,96 +1,86 @@
-# NUMERIQ.AI — Sovereign Reasoning Engine
+# 🔯 NUMERIQ.AI — SOVEREIGN INTELLIGENCE ENGINE v1.1
+### FULL ARCHITECTURAL SPECIFICATION (HLD/LLD)
 
-NUMERIQ is a Global Chaldean Numerology Intelligence SaaS Platform. It merges ancient mathematical science with modern AI determinism, providing enterprise-grade numerology readings through a heavily guarded "Sovereign Reasoning Architecture."
+This document serves as the master blueprint for the NUMERIQ.AI Astro-Numerology Fusion Platform. It is designed for maximum clarity for both human engineers and AI systems.
 
-## Architecture Overview
+---
 
-NUMERIQ is built on the **Five Locks** architectural principle, ensuring that AI is used *only* for narrative synthesis, while all mathematical operations and symbolic logic remain purely deterministic and framework-agnostic.
+## 🏗️ 1. HIGH-LEVEL DESIGN (HLD)
 
-1. **Epistemological Integrity:** Math runs deterministically in pure TypeScript.
-2. **Deterministic Routing:** Calculations control which traits are routed to the LLM.
-3. **RAG-Bound Narrative:** LLMs can only synthesize based on verified Chaldean canonical traits.
-4. **Golden Authority Validation:** A secondary LLM pass audits the output to prevent "AI Drift" or "Poison Pill" interpretations.
-5. **Ephemerality:** Interpretations are generated instantly. Personal data is never stored long-term unless requested via an Enterprise plan.
+### A. Core Architecture: The "Sovereign Equation"
+Identity (Chaldean) + Timing (Vedic) = Action (Synthesis).
+The system is built as a **Tri-Layer Architecture**:
+1.  **Deterministic Layer (Math):** TypeScript-based utilities for calculations.
+2.  **Intelligence Layer (RAG):** Context-aware vector retrieval from 132+ expert scenarios.
+3.  **Synthesis Layer (Orchestration):** LLM-based fusion with strict systemic guardrails.
 
-## Tech Stack
+### B. The Hard Input Contract
+To eliminate AI hallucination, the system calculates all core values *before* the AI is prompted. This data is injected as a **Deterministic Math Contract** (JSON-like structure) that the AI is strictly forbidden from recalculating.
 
-- **Framework:** Next.js 16 (App Router)
-- **Styling:** Tailwind CSS v4, Framer Motion
-- **Authentication & Database:** Supabase SSR (PKCE Flow)
-- **AI Synthesis:** Groq SDK (Llama 3 70B Versatile)
-- **Payments:** Stripe Checkout
-- **PDF Generation:** `@react-pdf/renderer`
+---
 
-## Project Structure
+## 🛠️ 2. LOW-LEVEL DESIGN (LLD) — COMPONENT REGISTRY
 
-```text
-src/
-├── app/                  # Next.js App Router (UI & API Routes)
-│   ├── (auth)/           # Secure SSR Login & Signup
-│   ├── (dashboard)/      # Protected Dashboard & Sovereign Preview
-│   └── api/              # Two-Stage API (Deterministic & Generative)
-├── components/           # React Components (UI, Auth, PDF)
-└── lib/                  
-    ├── engine/           # 🔒 SEALED: Sovereign Reasoning Engine
-    │   ├── core/         # Pure Math & Chaldean Computations
-    │   ├── ontology/     # Types and Data Structures
-    │   ├── synthesis/    # LLM Interaction & Context Mapping
-    │   └── validators/   # Golden Pass & Weight Audits
-    └── supabase/         # Supabase SSR & Browser Clients
-```
+### 💠 Logic Component (`/src/lib/engine/logic`)
+- **`calculator-utils.ts`**: 
+    - **`calculateNameNumber`**: Implements Chaldean breakdown. Rules: Word-by-word summation. **Sacred 9 Rule:** No letter is assigned 9 (sacred vibration).
+    - **`calculateBirthNumber`**: Reduces birth day to root digit (1-9).
+    - **`calculateDestinyNumber`**: Sums full DOB (D+M+Y) to root digit.
+    - **`validateDOB`**: Regex-based strict date validation (detects Feb 30, April 31 errors).
 
-## Setup & Local Development
+### 💠 Synthesis Component (`/src/lib/engine/synthesis`)
+- **`master-response-orchestrator.ts`**:
+    - **Planetary Friendship Matrix**: Encodes 9x9 Vedic friendship relations (Sun-Saturn enmity, Venus-Mercury friendship, etc.).
+    - **`FusionContext`**: Synthesizes math data with the current Vara (day ruler) and Mahadasha to create a "Fusion Score."
 
-### 1. Environment Variables
-Create a `.env.local` file with the following keys:
-```env
-# Next.js
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+### 💠 Intelligence Component (`/src/lib/engine/intelligence`)
+- **`master-system-prompt.ts`**: The "Jyotish-Guru" persona. Hard-coded rules for Sanskrit terminology and tone.
+- **`prompt-designer.ts`**:
+    - **Query Sanitization**: Regex scrubbers for forbidden Pythagorean terms ("Life Path", "Expression Number").
+    - **Category Routing**: Specific context injection for Career vs. Marriage vs. Finance.
 
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+### 💠 Service Component (`/src/lib/engine/service`)
+- **`astro-numerology-service.ts`**: The central API gateway. Orchestrates math, RAG retrieval, and response formatting into the "Golden Structure."
 
-# Groq (AI Synthesis)
-GROQ_API_KEY=your_groq_key
+---
 
-# Stripe (Payments)
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
-STRIPE_SECRET_KEY=sk_test_...
-STRIPE_WEBHOOK_SECRET=whsec_...
-```
+## 📚 3. RAG INVENTORY (KNOWLEDGE BASE)
+Our database (`library_embeddings` & `vedic_library_embeddings`) contains **43+ High-Density Rich Semantic Packets** (150-220 words each). 
 
-### 2. Database Migrations
-Run the SQL files located in `supabase/migrations/` in your Supabase SQL Editor. This will set up the `profiles`, `login_attempts`, and the critical `sovereignty_logs` tables required for system health monitoring.
+### ✅ Hydrated Topics:
+1.  **Chaldean Fundamentals:** 1-52 Compound Archetypes, Letter-to-Number mapping, Sacred 9 Philosophy.
+2.  **Identity Traits:** Root 1 (Sun) through Root 9 (Mars) comprehensive personalities.
+3.  **Timing (Vedic):** All 9 Mahadasha cycles (Sun 6y, Rahu 18y, Saturn 19y, etc.).
+4.  **Relationship (Koota):** Ashta Koota Milan (36-point system), Nadi Dosha, Gana Koota, Bhakoot Koota.
+5.  **Panchanga:** Tithi (Lunar Days), Amavasya (New Moon) Ancestor Worship, Brahma Muhurta.
+6.  **Remedies:** Planetary Mantras, Gemstones (Ruby, Emerald, Blue Sapphire), Charity Protocols.
+7.  **Yogas:** Kaal Sarp Yoga detection, Neecha Bhanga Raja Yoga (Rise from Weakness).
 
-### 3. Start the Server
-```bash
-npm install
-npm run dev
-```
+---
 
-## The Two-Stage Pipeline
+## 📊 4. SYSTEM INTEGRITY & AUDIT
+- **RAG Audit Score:** **132/132 (100%)** — Every knowledge scenario passes expert verification.
+- **Sovereignty Check:** PASS — AI is blocked from using Western/Pythagorean terms.
+- **Data Integrity:** PASS — Suresh Kumar (39/3) and Sachin Tendulkar (50/5) math verified.
 
-NUMERIQ operates on a conversion-optimized API pipeline:
+---
 
-1. **Stage 1 (Deterministic / Free):** `POST /api/sovereign-reading`
-   - Calculates the compound number and planetary alignment instantly.
-   - Extremely fast, highly cacheable, no LLM cost.
-   - Used for the UI "Preview Insight".
+## ⚖️ 5. THE GOLDEN RESPONSE STRUCTURE
+Every output follows this exact hierarchy:
+1.  🔢 **Numerology Insight**: Archetypal meaning of the Compound and Root numbers.
+2.  🔯 **Astrology Insight**: Analysis of the current **Vimshottari Mahadasha**.
+3.  ⚖️ **Combined Interpretation**: Synergy/Conflict between Name Planet and Dasha Planet.
+4.  📌 **Practical Guidance**: Actionable remedies (Mantra, Gem, Color).
+5.  ⏳ **Timing**: Exact periods for successful action.
 
-2. **Stage 2 (Generative / Paid):** `POST /api/sovereign-narrative`
-   - Triggers the Pilgrim Persona via Groq.
-   - Secured behind Stripe payment verification (`payment_intent_id`).
-   - Ensures strict idempotency (will not charge or generate twice for the same session).
-   - Generates the fully formatted PDF output.
+---
 
-## Security & Observability
+## 🚀 6. CURRENT DEVELOPED FEATURES
+- [x] **Deterministic Math Engine**: Name, Birth, Destiny, Personal Year/Month/Day.
+- [x] **Fusion Intelligence**: Planetary Friendship detection.
+- [x] **Marriage Compatibility**: 36-point Koota + Chaldean harmony.
+- [x] **Name Architect**: Auspicious spelling adjustment logic.
+- [x] **Query Sanitization**: Auto-redaction of non-sovereign terms.
 
-- **Rate Limiting:** Both API routes are protected by Upstash Redis to prevent abuse and API cost spikes.
-- **Observability:** Every run is logged to `sovereignty_logs` tracking `engine_version`, `llm_model`, latency, confidence scores, and pass/fail rates for the Golden Validator.
-- **Hydration Guards:** React PDF links are dynamically imported to prevent Next.js Turbopack compilation crashes over Node polyfills.
-- **SSR Cookies:** Fully compliant `@supabase/ssr` implementation utilizing `setAll` cookie synchronization.
-
-## Phase 3: What's Next?
-Following a successful staging deployment and analysis of user interpretation logs, the next phase will expand the Engine to encompass the **Compatibility System** (mapping interactions between two distinct Sovereign profiles).
+---
+*Developed by Sovereign Intelligence Engineering for NUMERIQ.AI*

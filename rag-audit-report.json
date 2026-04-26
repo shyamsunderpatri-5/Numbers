@@ -1,0 +1,1387 @@
+{
+  "timestamp": "2026-04-26T06:59:52.517Z",
+  "summary": {
+    "total": 132,
+    "sovereign": 98,
+    "weak": 29,
+    "criticalGaps": 5,
+    "productBreaking": 5,
+    "coverageScore": 74,
+    "qualityScore": 85,
+    "grade": "⚠️  ACCEPTABLE — needs improvement"
+  },
+  "criticalGaps": [
+    {
+      "query": "Mercury Mahadasha 17 years intelligence business communication trade",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "score": 0.442287210089738,
+      "productBreaking": true
+    },
+    {
+      "query": "1st house Lagna ascendant self body personality vitality",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "score": 0.41680560011834,
+      "productBreaking": true
+    },
+    {
+      "query": "2nd house wealth family speech food early education",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "score": 0.262962302124171,
+      "productBreaking": true
+    },
+    {
+      "query": "7th house marriage partnership business deal spouse karma",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "score": 0.435294575200553,
+      "productBreaking": true
+    },
+    {
+      "query": "10th house career status government authority public life profession",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "score": 0.32506068498258,
+      "productBreaking": true
+    }
+  ],
+  "weakAreas": [
+    {
+      "query": "Chaldean number letter assignment table A I J Q Y equals 1",
+      "subcategory": "Letter Mapping",
+      "score": 0.535660239199415
+    },
+    {
+      "query": "F P equals 8 in Chaldean numerology",
+      "subcategory": "Letter Mapping",
+      "score": 0.568649888038639
+    },
+    {
+      "query": "number 2 Moon emotion intuition sensitivity Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "score": 0.593594109630235
+    },
+    {
+      "query": "number 4 Rahu Uranus disruption rebellion unconventional Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "score": 0.575395251786993
+    },
+    {
+      "query": "number 5 Mercury intelligence communication business Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "score": 0.470965031270381
+    },
+    {
+      "query": "number 8 Saturn karma discipline delay justice Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "score": 0.494778080685336
+    },
+    {
+      "query": "compound number 16 shattered tower downfall ego Chaldean",
+      "subcategory": "Compound Numbers",
+      "score": 0.561285758210093
+    },
+    {
+      "query": "compound number 33 master teacher high vibration rare Chaldean",
+      "subcategory": "Compound Numbers",
+      "score": 0.591699659824388
+    },
+    {
+      "query": "compound number 43 pyramid sacrifice revolutionary misunderstood",
+      "subcategory": "Compound Numbers",
+      "score": 0.531426541465168
+    },
+    {
+      "query": "compound number 52 same energy 43 pyramid Chaldean",
+      "subcategory": "Compound Numbers",
+      "score": 0.531426541465168
+    },
+    {
+      "query": "name correction inauspicious compound spelling adjustment lucky",
+      "subcategory": "Calculations",
+      "score": 0.583768812383649
+    },
+    {
+      "query": "Rahu Ketu friendly Saturn Venus enemy Sun Moon Mars",
+      "subcategory": "Planetary Friendship",
+      "score": 0.599631261891498
+    },
+    {
+      "query": "Mars Mangal courage energy siblings land Red Coral copper Tuesday",
+      "subcategory": "Navagrahas",
+      "score": 0.488202307867182
+    },
+    {
+      "query": "Mercury Budha intelligence speech business Emerald green Wednesday",
+      "subcategory": "Navagrahas",
+      "score": 0.496754854724123
+    },
+    {
+      "query": "Jupiter Guru Brihaspati wisdom dharma children Yellow Sapphire Thursday",
+      "subcategory": "Navagrahas",
+      "score": 0.526286984733671
+    },
+    {
+      "query": "Saturn Shani karma discipline delay Blue Sapphire iron Saturday Sade Sati",
+      "subcategory": "Navagrahas",
+      "score": 0.585226644846638
+    },
+    {
+      "query": "Rahu north node obsession technology foreign sudden Hessonite Gomedha amplify",
+      "subcategory": "Navagrahas",
+      "score": 0.497747302055359
+    },
+    {
+      "query": "Ketu south node past life spirituality Cat Eye moksha detachment liberation",
+      "subcategory": "Navagrahas",
+      "score": 0.584321980380423
+    },
+    {
+      "query": "Saturn exalted Libra debilitated Aries vedic",
+      "subcategory": "Exaltation",
+      "score": 0.535714523068523
+    },
+    {
+      "query": "Rahu Mahadasha 18 years obsession foreign ambition sudden rise fall",
+      "subcategory": "Mahadasha",
+      "score": 0.592127835281363
+    },
+    {
+      "query": "Saturn Mahadasha 19 years karma discipline hard work delays reward",
+      "subcategory": "Mahadasha",
+      "score": 0.591019367636414
+    },
+    {
+      "query": "Jupiter antardasha Venus Mahadasha prosperity expansion results",
+      "subcategory": "Antardasha",
+      "score": 0.599212586879769
+    },
+    {
+      "query": "Ketu antardasha Rahu Mahadasha spiritual confusion transformation",
+      "subcategory": "Antardasha",
+      "score": 0.548086177846478
+    },
+    {
+      "query": "5th house children intelligence creativity romance past karma poorva punya",
+      "subcategory": "Houses",
+      "score": 0.540076622981221
+    },
+    {
+      "query": "11th house income gains social networks fulfillment elder siblings",
+      "subcategory": "Houses",
+      "score": 0.52073361535676
+    },
+    {
+      "query": "Kaal Sarp puja Tryambakeshwar remedy serpent worship Nagpanchami milk",
+      "subcategory": "Remedies",
+      "score": 0.582772806387043
+    },
+    {
+      "query": "Tithi lunar day 30 per month auspicious inauspicious activities",
+      "subcategory": "Panchanga",
+      "score": 0.586994949878777
+    },
+    {
+      "query": "Brahma Muhurta auspicious time 96 minutes before sunrise new beginnings",
+      "subcategory": "Panchanga",
+      "score": 0.576623865071829
+    },
+    {
+      "query": "Amavasya new moon inauspicious ancestor worship Pitru",
+      "subcategory": "Panchanga",
+      "score": 0.555961214894279
+    }
+  ],
+  "allResults": [
+    {
+      "query": "Chaldean number letter assignment table A I J Q Y equals 1",
+      "category": "Chaldean",
+      "subcategory": "Letter Mapping",
+      "status": "WEAK",
+      "score": 0.535660239199415,
+      "topMatch": "The Chaldean numerology system assigns specific number value...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 9 not assigned any letter Chaldean system sacred",
+      "category": "Chaldean",
+      "subcategory": "Letter Mapping",
+      "status": "SOVEREIGN",
+      "score": 0.802563630847037,
+      "topMatch": "TITLE: Chaldean Number 9 - The Sacred Number (Sovereign Auth...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "F P equals 8 in Chaldean numerology",
+      "category": "Chaldean",
+      "subcategory": "Letter Mapping",
+      "status": "WEAK",
+      "score": 0.568649888038639,
+      "topMatch": "The Chaldean numerology system assigns specific number value...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "number 1 Sun leadership individuality pioneer Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "SOVEREIGN",
+      "score": 0.625626735501303,
+      "topMatch": "Number 1 in Chaldean numerology is ruled by the Sun (Surya) ...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 2 Moon emotion intuition sensitivity Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "WEAK",
+      "score": 0.593594109630235,
+      "topMatch": "Number 2 in Chaldean numerology is ruled by the Moon (Chandr...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 3 Jupiter wisdom expansion creativity Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "SOVEREIGN",
+      "score": 0.630320159599856,
+      "topMatch": "Sovereign Root Number 3 (Jupiter): Carries Jupiterian influe...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 4 Rahu Uranus disruption rebellion unconventional Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "WEAK",
+      "score": 0.575395251786993,
+      "topMatch": "Number 4 in Chaldean numerology is ruled by Rahu (and Uranus...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 5 Mercury intelligence communication business Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "WEAK",
+      "score": 0.470965031270381,
+      "topMatch": "Sovereign Root Number 5 (Mercury): Carries Mercurial influen...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 6 Venus beauty love harmony luxury Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "SOVEREIGN",
+      "score": 0.662833492418116,
+      "topMatch": "Sovereign Root Number 6 (Venus): Carries Venusian influence....",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 7 Ketu Neptune spirituality moksha withdrawal Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "SOVEREIGN",
+      "score": 0.606577486779914,
+      "topMatch": "Sovereign Root Number 7 (Neptune/Ketu): Carries Neptunian in...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 8 Saturn karma discipline delay justice Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "WEAK",
+      "score": 0.494778080685336,
+      "topMatch": "Sovereign Root Number 8 (Saturn): Carries Saturnine influenc...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "number 9 Mars courage energy aggression warrior Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Number 1-9 Traits",
+      "status": "SOVEREIGN",
+      "score": 0.635062066301807,
+      "topMatch": "Sovereign Root Number 9 (Mars): Carries Martian influence. C...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "compound number 10 wheel of fortune success Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "SOVEREIGN",
+      "score": 0.678586604342451,
+      "topMatch": "Sovereign Compound Number 10 (Wheel of Fortune): Carries Sol...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "compound number 12 sacrifice betrayal trusted people Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "SOVEREIGN",
+      "score": 0.64190430334653,
+      "topMatch": "Compound number 12 in Chaldean numerology is called \"The Sac...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "compound number 16 shattered tower downfall ego Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "WEAK",
+      "score": 0.561285758210093,
+      "topMatch": "Sovereign Compound Number 16 (Shattered Citadel): Carries Ne...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "compound number 17 star magi immortal name spiritual success",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "SOVEREIGN",
+      "score": 0.678324144828988,
+      "topMatch": "Sovereign Compound Number 17 (Star of the Magi): Carries Sat...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "compound number 19 prince heaven success happiness Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "SOVEREIGN",
+      "score": 0.627734273020202,
+      "topMatch": "Sovereign Compound Number 19 (Prince of Heaven): Carries Sol...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "compound number 23 royal star lion unexpected help Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "SOVEREIGN",
+      "score": 0.737715118731705,
+      "topMatch": "Sovereign Compound Number 23 (Royal Star of the Lion): Carri...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "compound number 27 sceptre command authority genius Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "SOVEREIGN",
+      "score": 0.616612746787571,
+      "topMatch": "Sovereign Compound Number 27 (The Sceptre): Carries Martian ...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "compound number 33 master teacher high vibration rare Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "WEAK",
+      "score": 0.591699659824388,
+      "topMatch": "Sovereign Compound Number 31 (Isolation): Carries Rahuvian i...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "compound number 43 pyramid sacrifice revolutionary misunderstood",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "WEAK",
+      "score": 0.531426541465168,
+      "topMatch": "Sovereign Compound Number 30 (Mental Superiority): Carries J...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "compound number 52 same energy 43 pyramid Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Compound Numbers",
+      "status": "WEAK",
+      "score": 0.531426541465168,
+      "topMatch": "Sovereign Compound Number 30 (Mental Superiority): Carries J...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "name number calculation sum letters compound reduce root Chaldean",
+      "category": "Chaldean",
+      "subcategory": "Calculations",
+      "status": "SOVEREIGN",
+      "score": 0.718846533436017,
+      "topMatch": "The name number calculation in Chaldean numerology follows a...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "birth number day of birth reduced single digit",
+      "category": "Chaldean",
+      "subcategory": "Calculations",
+      "status": "SOVEREIGN",
+      "score": 0.629033892385032,
+      "topMatch": "The Birth Number in Chaldean numerology is calculated from t...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "destiny number full date birth day month year reduced",
+      "category": "Chaldean",
+      "subcategory": "Calculations",
+      "status": "SOVEREIGN",
+      "score": 0.64929986000061,
+      "topMatch": "The Destiny Number in Chaldean numerology is calculated by s...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "personal year number birth day birth month current year",
+      "category": "Chaldean",
+      "subcategory": "Calculations",
+      "status": "SOVEREIGN",
+      "score": 0.646297935313384,
+      "topMatch": "The Personal Year number in Chaldean numerology reveals the ...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "soul urge vowels only name A E I O U heart desire inner motivation",
+      "category": "Chaldean",
+      "subcategory": "Calculations",
+      "status": "SOVEREIGN",
+      "score": 0.67166972160347,
+      "topMatch": "The Soul Urge Number in Chaldean numerology, also called the...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "name correction inauspicious compound spelling adjustment lucky",
+      "category": "Chaldean",
+      "subcategory": "Calculations",
+      "status": "WEAK",
+      "score": 0.583768812383649,
+      "topMatch": "TITLE: Chaldean Name Correction (Sovereign Authority)\nDEFINI...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Sun friends Moon Mars Jupiter enemies Saturn Venus Chaldean planetary",
+      "category": "Chaldean",
+      "subcategory": "Planetary Friendship",
+      "status": "SOVEREIGN",
+      "score": 0.713816591783382,
+      "topMatch": "The Chaldean-Vedic planetary friendship table is essential f...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Saturn friends Mercury Venus enemies Sun Moon Mars neutral Jupiter",
+      "category": "Chaldean",
+      "subcategory": "Planetary Friendship",
+      "status": "SOVEREIGN",
+      "score": 0.675958712341873,
+      "topMatch": "The Chaldean-Vedic planetary friendship table is essential f...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Rahu Ketu friendly Saturn Venus enemy Sun Moon Mars",
+      "category": "Chaldean",
+      "subcategory": "Planetary Friendship",
+      "status": "WEAK",
+      "score": 0.599631261891498,
+      "topMatch": "The Chaldean-Vedic planetary friendship table is essential f...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Sun Surya vedic astrology soul father government authority Ruby Sunday",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "SOVEREIGN",
+      "score": 0.639103136116089,
+      "topMatch": "y combinations that give strong personalities Manas mind or ...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Moon Chandra mind mother emotion Pearl Monday silver vedic",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "SOVEREIGN",
+      "score": 0.613080524618595,
+      "topMatch": "Moon Mahadasha lasts 10 years and governs the mind, emotions...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Mars Mangal courage energy siblings land Red Coral copper Tuesday",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "WEAK",
+      "score": 0.488202307867182,
+      "topMatch": "TITLE: Mars Remedy Protocol (Upaya)\nDEFINITION: Spiritual an...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Mercury Budha intelligence speech business Emerald green Wednesday",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "WEAK",
+      "score": 0.496754854724123,
+      "topMatch": "Mercury, known as Budha in Vedic astrology, is the planet of...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Jupiter Guru Brihaspati wisdom dharma children Yellow Sapphire Thursday",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "WEAK",
+      "score": 0.526286984733671,
+      "topMatch": "TITLE: Jupiter Remedy Protocol (Upaya)\nDEFINITION: Spiritual...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Venus Shukra love beauty marriage luxury Diamond white Friday",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "SOVEREIGN",
+      "score": 0.625082381054939,
+      "topMatch": "Venus (Shukra) placed in the 12th house creates a complex an...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Saturn Shani karma discipline delay Blue Sapphire iron Saturday Sade Sati",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "WEAK",
+      "score": 0.585226644846638,
+      "topMatch": "Sade Sati is the 7.5-year period during which Saturn transit...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Rahu north node obsession technology foreign sudden Hessonite Gomedha amplify",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "WEAK",
+      "score": 0.497747302055359,
+      "topMatch": "TITLE: Rahu Remedy Protocol (Upaya)\nDEFINITION: Spiritual an...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Ketu south node past life spirituality Cat Eye moksha detachment liberation",
+      "category": "Vedic",
+      "subcategory": "Navagrahas",
+      "status": "WEAK",
+      "score": 0.584321980380423,
+      "topMatch": " occult in life. Positive Sides of Rahu and Ketu On the posi...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Jupiter 5th house children wisdom past karma auspicious",
+      "category": "Vedic",
+      "subcategory": "Planet in House",
+      "status": "SOVEREIGN",
+      "score": 0.618274995397042,
+      "topMatch": "Jupiter (Guru) placed in the 5th house is one of the most au...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Saturn 7th house marriage delay discipline partner karma",
+      "category": "Vedic",
+      "subcategory": "Planet in House",
+      "status": "SOVEREIGN",
+      "score": 0.611676381626565,
+      "topMatch": "Saturn (Shani) placed in the 7th house has significant impli...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Rahu 10th house career status unconventional foreign ambition",
+      "category": "Vedic",
+      "subcategory": "Planet in House",
+      "status": "SOVEREIGN",
+      "score": 0.788098263031153,
+      "topMatch": "Rahu (North Node) placed in the 10th house is a powerful pla...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Mars 8th house longevity sudden transformation aggressive",
+      "category": "Vedic",
+      "subcategory": "Planet in House",
+      "status": "SOVEREIGN",
+      "score": 0.628686056859285,
+      "topMatch": "ana 12-13. Directional strength 17 18 18 19 22 23 24 25 25 2...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Venus 12th house foreign pleasure private sensual expenses",
+      "category": "Vedic",
+      "subcategory": "Planet in House",
+      "status": "SOVEREIGN",
+      "score": 0.663035870247636,
+      "topMatch": "Venus (Shukra) placed in the 12th house creates a complex an...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Sade Sati 7.5 years Saturn transit Moon sign challenge remedy",
+      "category": "Vedic",
+      "subcategory": "Sade Sati",
+      "status": "SOVEREIGN",
+      "score": 0.691414989064342,
+      "topMatch": "Sade Sati detection requires knowing the native's natal Moon...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Sade Sati three phases rising peak setting effects life",
+      "category": "Vedic",
+      "subcategory": "Sade Sati",
+      "status": "SOVEREIGN",
+      "score": 0.618570566177386,
+      "topMatch": "Sade Sati is the 7.5-year period during which Saturn transit...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Sun exalted Aries debilitated Libra vedic astrology",
+      "category": "Vedic",
+      "subcategory": "Exaltation",
+      "status": "SOVEREIGN",
+      "score": 0.629090324531837,
+      "topMatch": "dge, with it marking the beginning of the se¬ quence. £ 7 ^M...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Jupiter exalted Cancer debilitated Capricorn vedic",
+      "category": "Vedic",
+      "subcategory": "Exaltation",
+      "status": "SOVEREIGN",
+      "score": 0.638903932440754,
+      "topMatch": "Planetary exaltation (Uccha) and debilitation (Neecha) repre...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Saturn exalted Libra debilitated Aries vedic",
+      "category": "Vedic",
+      "subcategory": "Exaltation",
+      "status": "WEAK",
+      "score": 0.535714523068523,
+      "topMatch": "f-knowledge, the astrologer, even if he can perceive the pow...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Ashwini nakshatra Ketu Ashwini Kumars healing swift horse Aries",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Bharani nakshatra Venus Yama transformation creativity Aries",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Krittika nakshatra Sun Agni purification sharp Aries Taurus",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Rohini nakshatra Moon Brahma beauty fertility abundance Taurus",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Mrigashira nakshatra Mars Soma deer curiosity search Taurus Gemini",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Ardra nakshatra Rahu Rudra storm transformation intellect Gemini",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Punarvasu nakshatra Jupiter Aditi renewal return Cancer Gemini",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Pushya nakshatra Saturn Brihaspati nourishment best auspicious Cancer",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Ashlesha nakshatra Mercury Naga mysticism cunning serpent Cancer",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Magha nakshatra Ketu Pitrs ancestors royalty throne Leo",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Purva Phalguni nakshatra Venus Bhaga pleasure love relaxation Leo",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Uttara Phalguni nakshatra Sun Aryaman service friendship Leo Virgo",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Hasta nakshatra Moon Savitar skill hands healing craft Virgo",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Chitra nakshatra Mars Vishwakarma beauty art architecture gem Virgo Libra",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Swati nakshatra Rahu Vayu independence business flexibility Libra",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Vishakha nakshatra Jupiter Indra Agni purpose passion Libra Scorpio",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.638150702184192,
+      "topMatch": "0* Gemini Venus 08-02-1903 Venus 20” 48'Virgo r Sun 08-02-19...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Anuradha nakshatra Saturn Mitra friendship devotion occult Scorpio",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Jyeshtha nakshatra Mercury Indra authority protection eldest Scorpio",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Mula nakshatra Ketu Nirriti roots destruction investigation Sagittarius",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Purva Ashadha nakshatra Venus Apas invincibility early victory Sagittarius",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Uttara Ashadha nakshatra Sun Vishvedevas final victory Sagittarius Capricorn",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Shravana nakshatra Moon Vishnu learning listening connectivity Capricorn",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Dhanishta nakshatra Mars Vasus wealth music drum ambition Capricorn Aquarius",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Shatabhisha nakshatra Rahu Varuna healing secretive independent Aquarius",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Purva Bhadrapada nakshatra Jupiter intensity passion sacrifice Aquarius Pisces",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Uttara Bhadrapada nakshatra Saturn Ahirbudhnya wisdom depth serpent Pisces",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Revati nakshatra Mercury Pushan completion nurturing journeys Pisces",
+      "category": "Vedic",
+      "subcategory": "Nakshatra",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Ketu Mahadasha 7 years past life spirituality sudden events",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "SOVEREIGN",
+      "score": 0.680343411009738,
+      "topMatch": "Ketu Mahadasha lasts 7 years in the Vimshottari Dasha system...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Venus Mahadasha 20 years luxury love wealth artistic abundance",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "SOVEREIGN",
+      "score": 0.655832903335421,
+      "topMatch": "l and, as such, represents our aesthetic sense. Venus is the...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Sun Mahadasha 6 years authority government career father status",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "SOVEREIGN",
+      "score": 0.601653439250098,
+      "topMatch": "Sun Mahadasha lasts 6 years and governs a period of authorit...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Moon Mahadasha 10 years emotions mother mind travel fluctuation",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "SOVEREIGN",
+      "score": 0.610487341880803,
+      "topMatch": "Moon Mahadasha lasts 10 years and governs the mind, emotions...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Mars Mahadasha 7 years energy courage property conflicts siblings",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "SOVEREIGN",
+      "score": 0.620915503283624,
+      "topMatch": "Mars Mahadasha lasts 7 years and brings a period of high ene...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Rahu Mahadasha 18 years obsession foreign ambition sudden rise fall",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "WEAK",
+      "score": 0.592127835281363,
+      "topMatch": "Rahu Mahadasha is the longest at 18 years and is one of the ...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Jupiter Mahadasha 16 years wisdom expansion dharma children blessings",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "SOVEREIGN",
+      "score": 0.614682518560764,
+      "topMatch": "Jupiter (Guru) placed in the 5th house is one of the most au...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Saturn Mahadasha 19 years karma discipline hard work delays reward",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "WEAK",
+      "score": 0.591019367636414,
+      "topMatch": "Saturn Mahadasha is the second longest at 19 years and repre...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Mercury Mahadasha 17 years intelligence business communication trade",
+      "category": "Vedic",
+      "subcategory": "Mahadasha",
+      "status": "CRITICAL_GAP",
+      "score": 0.442287210089738,
+      "topMatch": "Mercury Mahadasha lasts 17 years in the Vimshottari Dasha sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Rahu antardasha Saturn Mahadasha effects results life",
+      "category": "Vedic",
+      "subcategory": "Antardasha",
+      "status": "SOVEREIGN",
+      "score": 0.633353038626552,
+      "topMatch": "Antardasha (sub-period) within a Mahadasha (major period) de...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Jupiter antardasha Venus Mahadasha prosperity expansion results",
+      "category": "Vedic",
+      "subcategory": "Antardasha",
+      "status": "WEAK",
+      "score": 0.599212586879769,
+      "topMatch": " to enemy, increase in wealth and property* ■ Ejects of Sook...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Ketu antardasha Rahu Mahadasha spiritual confusion transformation",
+      "category": "Vedic",
+      "subcategory": "Antardasha",
+      "status": "WEAK",
+      "score": 0.548086177846478,
+      "topMatch": "Ketu Mahadasha lasts 7 years in the Vimshottari Dasha system...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Vimshottari Dasha 120 year cycle calculation Moon Nakshatra balance",
+      "category": "Vedic",
+      "subcategory": "Dasha Calculation",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Dasha balance calculation remaining period birth date Nakshatra lord",
+      "category": "Vedic",
+      "subcategory": "Dasha Calculation",
+      "status": "SOVEREIGN",
+      "score": 0.636125922203069,
+      "topMatch": "sa ff this figure is deducted from the total period of the D...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Gaja Kesari yoga Jupiter kendra Moon wisdom fame prosperity",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.756132879642626,
+      "topMatch": "tion and inimical sign, Gajakesari yoga is caused. One born ...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Raja Yoga kendra trikona lords conjunction wealth power status",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.666745086492298,
+      "topMatch": " COMBINATIONS arise (a) by the mutual association of lords o...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Kaal Sarp yoga all planets Rahu Ketu axis serpent karmic",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.653570293209281,
+      "topMatch": "rendered highly power- ful. Kamala Yoga lays emphasis on fam...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Neecha Bhanga Raja Yoga debilitated planet cancelled rise",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.69845527694721,
+      "topMatch": "Neecha Bhanga Raja Yoga is one of the most powerful and tran...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Viparita Raja Yoga 6th 8th 12th house lord gain from others loss",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.612655328195656,
+      "topMatch": "he 8th house is placed in the 6th, the 8th or the 12th, the ...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Budh Aditya yoga Sun Mercury conjunction sharp intelligence communication",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.601938044562806,
+      "topMatch": "he Sun would be present in almost every horoscope. Mercury i...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Panch Mahapurusha yoga Ruchaka Bhadra Hamsa Malavya Shasha",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.647430802004146,
+      "topMatch": "••• ••• 48. 3»Inciaoga Y^oga ... «»• n 49. Panjatha Y^oga .....",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Dhana yoga 2nd 11th lord conjunction wealth accumulation",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.691774530973218,
+      "topMatch": "d lord, whose inheient stiength is of coume assuoicd, is c-t...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Kemadruma yoga Moon alone no planets 2nd 12th house struggle",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.6427351916958,
+      "topMatch": ".22 1912.12.24 Shukra Rewies! 149% Kuja 15.30 Guru 5.46 Budh...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Rahu conjunct Moon Grahan yoga psychic obsession emotional intense",
+      "category": "Vedic",
+      "subcategory": "Yogas",
+      "status": "SOVEREIGN",
+      "score": 0.615142395819907,
+      "topMatch": "ed as the main planetary factor behind insanity, neuro¬ sis,...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "1st house Lagna ascendant self body personality vitality",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "CRITICAL_GAP",
+      "score": 0.41680560011834,
+      "topMatch": "how excessive spending, harsh speech, or excessive self-expr...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "2nd house wealth family speech food early education",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "CRITICAL_GAP",
+      "score": 0.262962302124171,
+      "topMatch": "ability to provide for ourselves in life. It does not indica...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "5th house children intelligence creativity romance past karma poorva punya",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "WEAK",
+      "score": 0.540076622981221,
+      "topMatch": "e Fifth house, will also share these traits. The Eighth hous...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "7th house marriage partnership business deal spouse karma",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "CRITICAL_GAP",
+      "score": 0.435294575200553,
+      "topMatch": "Saturn (Shani) placed in the 7th house has significant impli...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "8th house longevity transformation occult inheritance sudden events",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "SOVEREIGN",
+      "score": 0.628686056859285,
+      "topMatch": "ana 12-13. Directional strength 17 18 18 19 22 23 24 25 25 2...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "9th house dharma father higher education luck spirituality fortune",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "SOVEREIGN",
+      "score": 0.715125433236484,
+      "topMatch": "TITLE: The 9th House (Dharma Bhava) - Fortune\nDEFINITION: Th...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "10th house career status government authority public life profession",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "CRITICAL_GAP",
+      "score": 0.32506068498258,
+      "topMatch": "ules, though it may not be so for the Ascendant or the chart...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "11th house income gains social networks fulfillment elder siblings",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "WEAK",
+      "score": 0.52073361535676,
+      "topMatch": "The 11th House in Vedic astrology is called Labha Bhava — th...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "12th house losses foreign moksha liberation expenses spiritual",
+      "category": "Vedic",
+      "subcategory": "Houses",
+      "status": "SOVEREIGN",
+      "score": 0.674973961720285,
+      "topMatch": "TITLE: The 12th House (Vyaya Bhava) - Losses\nDEFINITION: The...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Nadi Koota 8 points highest compatibility marriage Aadi Madhya Antya",
+      "category": "Vedic",
+      "subcategory": "Koota Compatibility",
+      "status": "SOVEREIGN",
+      "score": 0.710654057219745,
+      "topMatch": "Ashta Koota Milan is the Vedic system of marriage compatibil...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Bhakoot Koota 7 points Moon sign relationship 2-12 6-8 dosha",
+      "category": "Vedic",
+      "subcategory": "Koota Compatibility",
+      "status": "SOVEREIGN",
+      "score": 0.736793700028989,
+      "topMatch": "Bhakoot Koota carries 7 points in Ashta Koota Milan and gove...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Gana Koota 6 points Deva Manushya Rakshasa temperament marriage",
+      "category": "Vedic",
+      "subcategory": "Koota Compatibility",
+      "status": "SOVEREIGN",
+      "score": 0.710148334503179,
+      "topMatch": "Gana Koota carries 6 points in Ashta Koota Milan and assesse...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Graha Maitri Koota 5 points Moon sign lord friendship mental",
+      "category": "Vedic",
+      "subcategory": "Koota Compatibility",
+      "status": "SOVEREIGN",
+      "score": 0.628550071375074,
+      "topMatch": "Ashta Koota Milan is the Vedic system of marriage compatibil...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Yoni Koota 4 points animal nakshatra sexual compatibility horse elephant",
+      "category": "Vedic",
+      "subcategory": "Koota Compatibility",
+      "status": "SOVEREIGN",
+      "score": 0.628550071375074,
+      "topMatch": "Ashta Koota Milan is the Vedic system of marriage compatibil...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Tara Koota 3 points birth star counting compatibility",
+      "category": "Vedic",
+      "subcategory": "Koota Compatibility",
+      "status": "SOVEREIGN",
+      "score": 0.628550071375074,
+      "topMatch": "Ashta Koota Milan is the Vedic system of marriage compatibil...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Vashya Koota 2 points control dominance compatibility marriage",
+      "category": "Vedic",
+      "subcategory": "Koota Compatibility",
+      "status": "SOVEREIGN",
+      "score": 0.628550071375074,
+      "topMatch": "Ashta Koota Milan is the Vedic system of marriage compatibil...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Ashta Koota Milan 36 points total marriage matching minimum 18",
+      "category": "Vedic",
+      "subcategory": "Koota Compatibility",
+      "status": "SOVEREIGN",
+      "score": 0.659164367094033,
+      "topMatch": "Ashta Koota Milan is the Vedic system of marriage compatibil...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Saturn remedy Blue Sapphire iron Saturday fast black sesame donate",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "SOVEREIGN",
+      "score": 0.725895908581769,
+      "topMatch": "TITLE: Saturn Remedy Protocol (Upaya)\nDEFINITION: Spiritual ...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Jupiter remedy Yellow Sapphire gold Thursday worship Brihaspati donate yellow",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "SOVEREIGN",
+      "score": 0.66492052836552,
+      "topMatch": "TITLE: Jupiter Remedy Protocol (Upaya)\nDEFINITION: Spiritual...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Rahu remedy Hessonite Gomedha Saturday worship Durga donate blue",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "SOVEREIGN",
+      "score": 0.68484518383588,
+      "topMatch": "The Rahu remedy protocol addresses an afflicted or challengi...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Ketu remedy Cat Eye Tuesday fast worship Ganesha sesame seeds",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "SOVEREIGN",
+      "score": 0.705228275995543,
+      "topMatch": "TITLE: Ketu Remedy Protocol (Upaya)\nDEFINITION: Spiritual an...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Moon remedy Pearl silver Monday fast white flowers rice donate",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "SOVEREIGN",
+      "score": 0.694060864513596,
+      "topMatch": "TITLE: Moon Remedy Protocol (Upaya)\nDEFINITION: Spiritual an...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Mars remedy Red Coral copper Tuesday fast Hanuman worship red lentils",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "SOVEREIGN",
+      "score": 0.689196582580225,
+      "topMatch": "TITLE: Mars Remedy Protocol (Upaya)\nDEFINITION: Spiritual an...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Venus remedy Diamond white sapphire Friday Lakshmi worship white sweet",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "SOVEREIGN",
+      "score": 0.659532864038095,
+      "topMatch": "TITLE: Venus Remedy Protocol (Upaya)\nDEFINITION: Spiritual a...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Sun remedy Ruby gold Sunday fast wheat jaggery Surya Namaskar",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "SOVEREIGN",
+      "score": 0.709497469097538,
+      "topMatch": "The Sun (Surya) remedy protocol in Vedic astrology addresses...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Kaal Sarp puja Tryambakeshwar remedy serpent worship Nagpanchami milk",
+      "category": "Vedic",
+      "subcategory": "Remedies",
+      "status": "WEAK",
+      "score": 0.582772806387043,
+      "topMatch": "Adhama) the middl mg 5W (Sama) and the highest (Vansbta) 113...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Panchanga five limbs Tithi Vara Nakshatra Yoga Karana daily almanac",
+      "category": "Vedic",
+      "subcategory": "Panchanga",
+      "status": "SOVEREIGN",
+      "score": 0.618056498881815,
+      "topMatch": "s of the ancients are not part of a naive anthropomorphic sy...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Tithi lunar day 30 per month auspicious inauspicious activities",
+      "category": "Vedic",
+      "subcategory": "Panchanga",
+      "status": "WEAK",
+      "score": 0.586994949878777,
+      "topMatch": "tion. The followers of Sama Veda observe it when the Moon is...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Brahma Muhurta auspicious time 96 minutes before sunrise new beginnings",
+      "category": "Vedic",
+      "subcategory": "Panchanga",
+      "status": "WEAK",
+      "score": 0.576623865071829,
+      "topMatch": " (i.e. 60 minutes of time) from mid-day or from mid-night is...",
+      "criticalForProduct": true
+    },
+    {
+      "query": "Amavasya new moon inauspicious ancestor worship Pitru",
+      "category": "Vedic",
+      "subcategory": "Panchanga",
+      "status": "WEAK",
+      "score": 0.555961214894279,
+      "topMatch": "isit shrines. If the Moon is in Gamaiiavastha, with decreasi...",
+      "criticalForProduct": false
+    },
+    {
+      "query": "Shukla Paksha waxing Moon auspicious Krishna Paksha waning Moon",
+      "category": "Vedic",
+      "subcategory": "Panchanga",
+      "status": "SOVEREIGN",
+      "score": 0.649730029750462,
+      "topMatch": "The lunar month in the Vedic calendar is divided into two fo...",
+      "criticalForProduct": false
+    }
+  ]
+}

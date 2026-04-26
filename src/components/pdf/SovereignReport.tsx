@@ -72,17 +72,19 @@ const styles = StyleSheet.create({
   }
 });
 
+export interface SovereignReportProps {
+  name: string;
+  compoundNumber: number;
+  planet: string;
+  narrative: string;
+}
+
 export const SovereignReport = ({ 
   name, 
   compoundNumber, 
   planet, 
   narrative 
-}: { 
-  name: string, 
-  compoundNumber: number, 
-  planet: string, 
-  narrative: string 
-}) => (
+}: SovereignReportProps) => (
   <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.header}>

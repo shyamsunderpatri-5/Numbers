@@ -1,10 +1,5 @@
-/**
- * NUMERIQ.AI - Reading API Route
- * POST /api/reading
- */
-
 import { NextRequest, NextResponse } from "next/server";
-import { generateReading } from "@/lib/numerology/readingService";
+import { generateHighConversionReading } from "@/lib/numerology/high-conversion-service";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { z } from "zod";
 
@@ -13,12 +8,11 @@ const readingSchema = z.object({
   dateOfBirth: z.string().refine((val) => !isNaN(Date.parse(val)), {
     message: "Invalid date format",
   }),
+  problemType: z.enum(["money", "career", "relationships", "confusion"]),
 });
 
 export async function POST(request: NextRequest) {
   try {
-    // 1. Auth Check (Server-side)
-    const response = NextResponse.next();
     const supabase = createServerClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -43,7 +37,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // 2. Validate Input
     const body = await request.json();
     const parsed = readingSchema.safeParse(body);
 
@@ -51,26 +44,28 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Invalid input", details: parsed.error }, { status: 400 });
     }
 
-    // 3. Generate Reading (Layer 1, 2, 3)
-    const reading = await generateReading(
+    // Generate High-Conversion Reading
+    const reading = await generateHighConversionReading(
       parsed.data.fullName,
-      new Date(parsed.data.dateOfBirth)
+      new Date(parsed.data.dateOfBirth),
+      parsed.data.problemType
     );
 
-    // 4. Store in Database
+    // Store in Database with problem context
     const { error: dbError } = await supabase.from('readings').insert({
       user_id: session.user.id,
-      full_name: parsed.data.fullName,
-      date_of_birth: parsed.data.dateOfBirth,
-      destiny_number: reading.mathData.destinyNumber,
-      life_path_number: reading.mathData.lifePathNumber,
-      mathematical_data: reading.mathData,
-      ai_reading_json: reading
+      reading_name: parsed.data.fullName,
+      birth_date: parsed.data.dateOfBirth,
+      data: {
+        problem_type: parsed.data.problemType,
+        ...reading
+      },
+      type: "personal",
+      is_saved: true
     });
 
     if (dbError) {
       console.error("Database storage failed:", dbError);
-      // We still return the reading even if storage fails, but log it
     }
 
     return NextResponse.json(reading);

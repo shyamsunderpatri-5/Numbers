@@ -18,6 +18,7 @@ import {
   Loader2,
   Copy
 } from 'lucide-react';
+import { UserPreferences } from '@/components/dashboard/UserPreferences';
 
 export default function SettingsPage() {
   const [mfaEnabled, setMfaEnabled] = useState(false);
@@ -152,15 +153,7 @@ export default function SettingsPage() {
             )}
           </div>
 
-          <div className="glass-card p-8 rounded-3xl space-y-6 opacity-50 cursor-not-allowed">
-            <h3 className="text-xl font-bold text-white flex items-center gap-3">
-              <Lock className="w-5 h-5" />
-              Change Password
-            </h3>
-            <div className="space-y-4">
-              <p className="text-zinc-500 text-sm italic">Password management is currently handled via secure email links.</p>
-            </div>
-          </div>
+          <UserPreferences />
         </div>
 
         {/* Right: Security Meta */}

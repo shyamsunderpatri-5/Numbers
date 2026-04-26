@@ -9,9 +9,13 @@ const {
     CONFLICT_RESOLUTION,
     VERSION 
 } = require("../core/chaldean-core-v1");
-const SYSTEM_VERSION = "1.0-SOVEREIGN";
+const { PROBLEM_MAP } = require("../logic/problem-mapper");
+const { getSuggestedNames } = require("../logic/name-engine");
+const { getRankedRemedies } = require("../logic/remedy-mapper");
 
-require('dotenv').config({ path: path.join(__dirname, '../../../../.env.local') });
+const SYSTEM_VERSION = "1.1-HIGH-CONVERSION";
+
+require('dotenv').config({ path: path.join(process.cwd(), '.env.local') });
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -45,9 +49,10 @@ async function getTraits(number, isCompound = false, originalQuery = null) {
     const type = isCompound ? "Compound" : "Root";
     const label = `Sovereign ${type} Number ${number}`;
     const scanText = originalQuery ? `${originalQuery} ${label}` : label;
-
+ 
     // 0. Trait Canonicalization (New Layer)
-    const ontology = JSON.parse(fs.readFileSync(path.join(__dirname, '../ontology/trait-ontology.json'), 'utf8'));
+    const ontologyPath = path.join(process.cwd(), 'src/lib/engine/ontology/trait-ontology.json');
+    const ontology = JSON.parse(fs.readFileSync(ontologyPath, 'utf8'));
     let forcedVibration = null;
     let highestPriority = -1;
 
@@ -130,11 +135,26 @@ async function getTraits(number, isCompound = false, originalQuery = null) {
 }
 
 /**
+ * 2.5 Remedy Layer
+ */
+async function getRemedies(number) {
+    const { data } = await supabase
+        .from('knowledge_base')
+        .select('content')
+        .eq('knowledge_type', 'number_1_9')
+        .eq('key', number.toString())
+        .single();
+    
+    const remedies = data?.content?.homeRemedies || [];
+    return remedies.length > 0 ? remedies : ["No specific home remedies recorded for this frequency."];
+}
+
+/**
  * 3. Synthesis Layer (Hard Input Contract)
  */
-async function synthesize(name, birthDay) {
+async function synthesize(name, birthDay, birthMonth, birthYear, problemType = "confusion") {
     const startTime = Date.now();
-    console.log(`🔮 Synthesizing Chaldean Profile for: ${name} (Day ${birthDay})`);
+    console.log(`🔮 Synthesizing High-Conversion Profile for: ${name} | Focus: ${problemType}`);
     
     // Name Logic
     const nameData = calculateName(name);
@@ -145,6 +165,11 @@ async function synthesize(name, birthDay) {
     const birthSingle = birthDay % 9 || 9;
     const birthRootTraits = ROOT_TRAITS[birthSingle].traits;
 
+    // Logic Layer Integration
+    const problemDef = PROBLEM_MAP[problemType] || PROBLEM_MAP.confusion;
+    const rankedRemedies = getRankedRemedies(nameData.single);
+    const nameSuggestions = getSuggestedNames(name, problemDef.primaryVibrations);
+
     // Hard Input Contract
     const contract = {
         identity_layer: {
@@ -152,58 +177,63 @@ async function synthesize(name, birthDay) {
             compound_number: nameData.compound,
             primary_vibration: nameData.single,
             planet: PLANETARY_ADJECTIVES[nameData.single],
-            weighting: WEIGHTING_RULES.NAME_NUMBER,
             raw_traits: {
                 compound: nameCompoundTraits,
                 root: nameRootTraits
-            },
-            metadata
+            }
         },
-        foundation_layer: {
-            day: birthDay,
-            primary_vibration: birthSingle,
-            planet: PLANETARY_ADJECTIVES[birthSingle],
-            weighting: WEIGHTING_RULES.BIRTH_NUMBER,
-            raw_traits: birthRootTraits
+        problem_layer: {
+            selected_problem: problemType,
+            label: problemDef.label,
+            behavioral_friction: problemDef.behavioralTraits,
+            impact_goal: problemDef.impactDescription
         },
-        conflict_resolution: CONFLICT_RESOLUTION(PLANETARY_ADJECTIVES[nameData.single], PLANETARY_ADJECTIVES[birthSingle]),
+        action_layer: {
+            ranked_remedies: rankedRemedies,
+            suggested_upgrades: nameSuggestions
+        },
         system_version: VERSION
     };
 
     const latency = Date.now() - startTime;
 
-    // Prompt Guardrails
+    // Prompt Guardrails (Strict Behavioral Design)
     const prompt = `
-[ROLE] You are the "Pilgrim", a master of Chaldean Numerology.
-[INPUT] Use the following HARD CONTRACT JSON: ${JSON.stringify(contract)}
+[ROLE] You are the "Pilgrim", a master of Chaldean Numerology and Behavioral Design.
+[INPUT] Use this HARD CONTRACT JSON: ${JSON.stringify(contract)}
 
-[GUIDELINES]
-1. COMPOUND FIRST: Always prioritize the Compound Number meaning (${contract.identity_layer.compound_number}).
-2. PLANETARY IDENTITY: Frame everything through ${contract.identity_layer.planet} and ${contract.foundation_layer.planet} influences.
-3. POLARITY: Include both Constructive and Destructive traits.
-4. FORBIDDEN: NEVER mention "Life Path", "Expression Number", "Destiny Number", "reduces to", or "digit sum".
-5. STRUCTURE: 
-   - Identity (Name)
-   - Foundation (Birth)
-   - Synthesis (Conflict Resolution)
+[OUTPUT STRUCTURE - MANDATORY JSON ONLY]
+{
+  "identityHook": "One powerful line connecting their name vibration to their current state.",
+  "problems": ["Bullet 1: Direct behavioral friction", "Bullet 2", "Bullet 3"],
+  "rootCause": "Simplified explanation of why their current vibration causes this problem.",
+  "remedies": [
+    {"text": "Remedy 1", "difficulty": "easy/medium", "isQuickWin": true/false},
+    ...max 5
+  ],
+  "topRemedy": "The one most impactful action to take today.",
+  "nameUpgrade": {
+    "current": "${name} (${nameData.single})",
+    "suggested": "Optimized Name (Number)",
+    "impact": "Behavioral improvement description"
+  },
+  "confidenceScore": "Strong match with your behavior"
+}
 
-[NARRATIVE TONE] Compassionate, expert, and dignified.
+[STRICT RULES]
+1. NO SPIRITUAL LANGUAGE: Use "Behavioral patterns," "Decision clarity," "Vibrational friction."
+2. NO PERCENTAGES: Use descriptions like "Improves professional authority."
+3. PROBLEM FOCUS: Every word must address the selected problem: ${contract.problem_layer.label}.
+4. ONE PRIMARY ACTION: Ensure 'topRemedy' is the clear focus.
+5. CONSTRAINED NAMES: Only use the suggested upgrades from the contract: ${JSON.stringify(contract.action_layer.suggested_upgrades)}.
+6. NO PYTHAGOREAN TERMS: (e.g. No 'Life Path').
     `;
 
     return { contract, prompt, latency };
 }
 
-// Example usage
-async function main() {
-    const { contract, prompt } = await synthesize("RAHUL", 6);
-    console.log("\n--- HARD INPUT CONTRACT ---");
-    console.log(JSON.stringify(contract, null, 2));
-    console.log("\n--- GUARDED PROMPT ---");
-    console.log(prompt);
-}
-
-if (require.main === module) {
-    main().catch(console.error);
-}
-
-module.exports = { synthesize };
+module.exports = {
+    synthesize,
+    calculateName,
+    logSovereigntyEvent
+};

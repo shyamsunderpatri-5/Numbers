@@ -37,6 +37,13 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     missingMeaning: "Lack of initiative or self-confidence; difficulty asserting one's own will.",
     missingImpact: { relationships: "May follow others too much", career: "Difficulty starting new projects", finances: "Passivity in wealth building", dailyLife: "Lack of focus" },
     missingRemedy: { color: "Orange", habit: "Morning affirmations", name: "Change to a 1 vibration", element: "Fire", timing: "Dawn" },
+    homeRemedies: [
+      "Wear a red thread on your right wrist",
+      "Use a red handkerchief daily",
+      "Rise before the sun (Brahma Muhurta)",
+      "Offer water in a glass or copper vessel to the sun",
+      "Speak respectfully with father figures"
+    ],
     isGoodNumber: true,
     indaNarrative: "The Number 1 vibrates to the Sun. It represents creativity, pro- tection, and benevolence. 1 is the number of original action, the ini- A person or entity is influenced by the Number 1 if born on the 1st, 10th, 19th, or 28th day of any month in any year. People or",
     historicalNote: "Traced to ancient Chaldean sources; Sepharial notes that the earliest enumeration was made from these sources, which were distinctly decimal.",
@@ -78,6 +85,13 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     missingMeaning: "Difficulty connecting with others; lack of empathy or emotional awareness.",
     missingImpact: { relationships: "Insensitivity", career: "Poor teamwork", finances: "Lack of intuition in deals", dailyLife: "Emotional dryness" },
     missingRemedy: { color: "Pale Blue", habit: "Journaling feelings", name: "Add a 2 vibration", element: "Water", timing: "Late evening" },
+    homeRemedies: [
+      "Wear a white thread on your left wrist",
+      "Keep a white handkerchief in your pocket",
+      "Drink water from a glass or silver vessel",
+      "Spend 5 minutes under moonlight",
+      "Spend 5 minutes listening to mother figures"
+    ],
     isGoodNumber: true,
     indaNarrative: "The Number 2 vibrates to the Moon. It represents imagination, parenthood, and sensitivity. 2 is the number of conception, child- A person or entity is influenced by the Number 2 if born on the 2nd, 11th, 20th, or 29th day of any month, in any year. People or",
     historicalNote: "Associated with the Dual Nature in ancient Chaldean thought—representing the reflective side of life.",
@@ -118,6 +132,13 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     missingMeaning: "Lack of discipline or direction; difficulty finishing what is started.",
     missingImpact: { relationships: "Lack of growth together", career: "Stagnation", finances: "Poor planning", dailyLife: "Disarray" },
     missingRemedy: { color: "Magenta", habit: "Setting 5-year goals", name: "Add a 3 vibration", element: "Air", timing: "Late morning" },
+    homeRemedies: [
+      "Wear a yellow thread on your right wrist",
+      "Keep a yellow handkerchief daily",
+      "Read 1 page of a wisdom book daily",
+      "Apply a small tilak of turmeric on your forehead",
+      "Seek advice from a mentor or elder"
+    ],
     isGoodNumber: true,
     indaNarrative: "The Number 3 vibrates to the planet Jupiter. It represents idealism, higher education, foreign travel, and religion. 3 is the num- ber of optimism, movement, expansion — and the Holy Trinity of the A person or entity is influenced by the Number 3 if born on the",
     historicalNote: "The first number of the 'Common Numbers' group in Chaldean science. Represents the power of the Trinity.",
@@ -158,8 +179,15 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     missingMeaning: "Lack of structure or practicality; difficulty staying grounded.",
     missingImpact: { relationships: "Unreliability", career: "Poor organization", finances: "Wastefulness", dailyLife: "Chaos" },
     missingRemedy: { color: "Brown", habit: "Budgeting", name: "Add a 4 vibration", element: "Earth", timing: "Midnight" },
-    isGoodNumber: false,
     remedyIfChallenging: "Avoid double 4/8 combinations; take important actions on 1st or 6th dates.",
+    homeRemedies: [
+      "Wear a grey or blue thread on your wrist",
+      "Keep your footwear away from the entrance",
+      "Feed stray birds daily",
+      "Discard or donate 1 unused item daily",
+      "Help a stranger or someone in need"
+    ],
+    isGoodNumber: false,
     indaNarrative: "The Number 4 vibrates to the planet Uranus. It represents indi- vidualism, originality, inventiveness, and tolerance. 4 is the number of unconventional behavior and sudden, unexpected events — also of A person or entity is influenced by the Number 4 if born on the",
     historicalNote: "Anciently linked to the North Node (Rahu) and the planet Uranus. Known as the 'shadow of the Sun'.",
     sunSignInteractions: {
@@ -174,6 +202,14 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     planet: "Mercury",
     asSoulUrge: "Motivated by an intense yearning for freedom, change, and the exploration of all senses. The soul loathes routine and is constantly seeking the thrill of the new and the adventurous.",
     asPersonality: "Projects a charming, sensual, and highly adaptable image. Seen as a versatile communicator who can attract media attention and potentially fame; always independent and quick-moving.",
+    isGoodNumber: true,
+    homeRemedies: [
+      "Wear a green thread on your right wrist",
+      "Use a green handkerchief daily",
+      "Keep a green plant on your desk",
+      "Speak clearly and avoid slang",
+      "Connect with a sibling or colleague"
+    ],
     indaNarrative: "The number 5 vibrates to the planet Mercury. It represents com- munication, movement, and versatility. It's the number of the intel- A person or entity is influenced by the number 5 if born on the 5th, 14th, or 23rd day of any month in any year. People born on the",
     sunSignInteractions: {
       "Gemini": "Intensifies Sun Sign traits.",
@@ -221,6 +257,13 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     missingMeaning: "Lack of harmony in relationships; difficulty expressing love or taking responsibility.",
     missingImpact: { relationships: "Distance", career: "Lack of cooperation", finances: "Poor aesthetic judgment", dailyLife: "Disorder" },
     missingRemedy: { color: "Pink", habit: "Daily acts of service", name: "Add a 6 vibration", element: "Earth", timing: "Twilight" },
+    homeRemedies: [
+      "Wear a pink or white thread on your wrist",
+      "Use a mild fragrance daily",
+      "Keep your space clean",
+      "Keep fresh flowers nearby",
+      "Speak gently in conversations"
+    ],
     isGoodNumber: true,
     indaNarrative: "The Number 6 vibrates to the planet Venus. It represents the feminine essence, compassion, and (until Venus gives up her rulership of Taurus when the planet Pan-Horus is discovered) also money. 6 is A person or an entity is influenced by the Number 6 if born on",
     historicalNote: "The number of creation (6 days). Associated with Venus and the 'House of Love' in ancient Kabalistic science.",
@@ -262,6 +305,13 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     missingMeaning: "Lack of depth or spiritual awareness; difficulty being alone.",
     missingImpact: { relationships: "Superficiality", career: "Lack of insight", finances: "Poor forecasting", dailyLife: "Restlessness" },
     missingRemedy: { color: "Sea Green", habit: "Weekly meditation", name: "Add a 7 vibration", element: "Water", timing: "Full moon" },
+    homeRemedies: [
+      "Wear a multicolored thread on your wrist",
+      "Spend 10 minutes in complete silence daily",
+      "Feed a stray dog or birds",
+      "Donate a blanket or clothes to those in need",
+      "Ask an elder about their life experience"
+    ],
     isGoodNumber: true,
     indaNarrative: "The Number 7 vibrates to the planet Neptune. It represents spir- ituality, sensitivity, sympathy, and mystery 7 is the number of illu- sion and delusion, sometimes deception — but also the number of healing and miracles, faith — and dreams that come true.",
     historicalNote: "A sacred number in all ancient religions. Associated with Neptune and the seven days of the week.",
@@ -302,8 +352,15 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     missingMeaning: "Lack of discipline or ambition; difficulty handling authority or money.",
     missingImpact: { relationships: "Lack of commitment", career: "Poor management", finances: "Irresponsibility", dailyLife: "Weakness" },
     missingRemedy: { color: "Indigo", habit: "Weight training", name: "Add an 8 vibration", element: "Earth", timing: "Dusk" },
-    isGoodNumber: false,
     remedyIfChallenging: "Avoid double 8/4 combinations; use the 24th or 6th for important signatures.",
+    homeRemedies: [
+      "Wear a dark blue thread on your wrist",
+      "Light a small oil lamp (diya) in the evening",
+      "Eat your meals on time without waste",
+      "Be punctual and honest in one task",
+      "Thank those who serve you"
+    ],
+    isGoodNumber: false,
     indaNarrative: ". The Number 8 vibrates to the planet Saturn. It represents wis- dom, learning through experience, stability, patience, and responsibil- ity. 8 is also the number of financial security, caution, restriction, self- A person or entity is influenced by the Number 8 if born on the",
     historicalNote: "Commonly known as the number of Fate. In many ancient cultures, it was avoided for signatures but used for building.",
     sunSignInteractions: {
@@ -343,6 +400,13 @@ export const NUMBER_KNOWLEDGE: Record<number, NumberKnowledge> = {
     missingMeaning: "Lack of courage or drive; difficulty finishing projects or standing up for oneself.",
     missingImpact: { relationships: "Passive-aggression", career: "Quitting too easily", finances: "Fear of risk", dailyLife: "Weakness" },
     missingRemedy: { color: "Scarlet", habit: "Martial arts or intense exercise", name: "Add a 9 vibration", element: "Fire", timing: "Sunrise" },
+    homeRemedies: [
+      "Wear a red thread on your right wrist",
+      "Practice 10 minutes of physical exercise",
+      "Breathe deeply before responding to stress",
+      "Donate a red fruit on Tuesdays",
+      "Support a sibling or colleague in a task"
+    ],
     isGoodNumber: true,
     indaNarrative: "The Number 9 vibrates to the planet Mars. It represents ag- gressive action, penetration, courage, and conflict. 9 is the number of originality and initiative . . . also the .contradictory traits of vul- A person or entity is influenced by the Number 9 if born on the",
     historicalNote: "Known as the 'Sacred Number' that should not be reduced further in some traditions. Associated with Mars, the Greek God of War.",

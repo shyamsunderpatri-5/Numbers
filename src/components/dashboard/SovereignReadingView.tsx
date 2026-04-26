@@ -3,13 +3,9 @@
 import React, { useState } from 'react';
 import { Lock, Sparkles, ShieldCheck, ArrowRight, Download, Loader2 } from 'lucide-react';
 import { loadStripe } from '@stripe/stripe-js';
-import dynamic from 'next/dynamic';
-const PDFDownloadLink = dynamic(
-  () => import('@react-pdf/renderer').then(mod => mod.PDFDownloadLink),
-  { ssr: false }
-);
-import { SovereignReport } from '../pdf/SovereignReport';
+import { SafePDFButton } from './SafePDFButton';
 import { useSearchParams } from 'next/navigation';
+import { PremiumAssistant } from '../numerology/PremiumAssistant';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -21,6 +17,8 @@ export default function SovereignReadingView() {
 
   const [name, setName] = useState(queryName || '');
   const [birthDay, setBirthDay] = useState(queryBirthDay || '');
+  const [birthMonth, setBirthMonth] = useState('');
+  const [birthYear, setBirthYear] = useState('');
   const [loading, setLoading] = useState(false);
   const [narrativeLoading, setNarrativeLoading] = useState(false);
   const [stage1Result, setStage1Result] = useState<any>(null);
@@ -60,7 +58,7 @@ export default function SovereignReadingView() {
       const res = await fetch('/api/sovereign-reading', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, birthDay })
+        body: JSON.stringify({ name, birthDay, birthMonth, birthYear })
       });
       const data = await res.json();
       if (res.ok) {
@@ -81,7 +79,7 @@ export default function SovereignReadingView() {
       const res = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, birthDay, contract: stage1Result.contract })
+        body: JSON.stringify({ name, birthDay, birthMonth, birthYear, contract: stage1Result.contract })
       });
       const data = await res.json();
       if (res.ok) {
@@ -101,7 +99,7 @@ export default function SovereignReadingView() {
             Discover Your Sovereign Vibration
           </h2>
           <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-            Enter your name and birth day to unlock the deterministic root of your Chaldean profile.
+            Enter your name and full birth date to unlock the deterministic root of your Chaldean profile.
           </p>
           <div className="flex flex-col gap-4 max-w-md mx-auto">
             <input 
@@ -111,16 +109,32 @@ export default function SovereignReadingView() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <input 
-              type="number" 
-              placeholder="Day of Birth (e.g. 15)" 
-              className="bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500"
-              value={birthDay}
-              onChange={(e) => setBirthDay(e.target.value)}
-            />
+            <div className="grid grid-cols-3 gap-3">
+              <input 
+                type="number" 
+                placeholder="Day" 
+                className="bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500"
+                value={birthDay}
+                onChange={(e) => setBirthDay(e.target.value)}
+              />
+              <input 
+                type="number" 
+                placeholder="Month" 
+                className="bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500"
+                value={birthMonth}
+                onChange={(e) => setBirthMonth(e.target.value)}
+              />
+              <input 
+                type="number" 
+                placeholder="Year" 
+                className="bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500"
+                value={birthYear}
+                onChange={(e) => setBirthYear(e.target.value)}
+              />
+            </div>
             <button 
               onClick={handleCalculate}
-              disabled={loading || !name || !birthDay}
+              disabled={loading || !name || !birthDay || !birthMonth || !birthYear}
               className="bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 text-white font-bold py-3 rounded-xl transition-all duration-300 mt-4"
             >
               {loading ? "Calculating..." : "Reveal Core Vibration"}
@@ -197,26 +211,16 @@ export default function SovereignReadingView() {
                     <h3 className="text-2xl font-bold text-indigo-300">The Pilgrim's Revelation</h3>
                     
                     {/* Guarded PDF Generation */}
-                    <PDFDownloadLink
-                      document={
-                        <SovereignReport 
-                          name={name} 
-                          compoundNumber={stage1Result?.compoundNumber || 0} 
-                          planet={stage1Result?.planet || "Unknown"} 
-                          narrative={stage2Result.narrative} 
-                        />
-                      }
+                    <SafePDFButton
+                      narrative={stage2Result.narrative}
                       fileName={`Sovereign-Reading-${name}.pdf`}
-                      className="bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2 border border-slate-600"
-                    >
-                      {/* Using a simple function to handle loading state from react-pdf */}
-                      {({ loading }) => (
-                        <>
-                          <Download className="w-4 h-4" />
-                          {loading ? 'Generating PDF...' : 'Download Report'}
-                        </>
-                      )}
-                    </PDFDownloadLink>
+                      reportData={{
+                        name: name,
+                        compoundNumber: stage1Result?.compoundNumber || 0,
+                        planet: stage1Result?.planet || "Unknown",
+                        narrative: stage2Result.narrative
+                      }}
+                    />
                   </div>
                   
                   <div className="prose prose-invert prose-indigo max-w-none">
@@ -230,6 +234,7 @@ export default function SovereignReadingView() {
           </div>
         </div>
       )}
+      {stage2Result && <PremiumAssistant readingContext={stage2Result} />}
     </div>
   );
 }

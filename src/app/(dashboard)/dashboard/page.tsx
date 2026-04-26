@@ -15,13 +15,17 @@ import {
   Zap,
   Star,
   ChevronRight,
-  CalendarDays
+  CalendarDays,
+  Activity,
+  ArrowRight,
+  Users
 } from 'lucide-react';
 import { Metadata } from 'next';
-import { createServerClient, type CookieOptions } from '@supabase/ssr';
+import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { AIParsedReading } from '@/lib/numerology/types';
+import { QuickSynergy } from '@/components/dashboard/QuickSynergy';
 
 export const metadata: Metadata = {
   title: "Vibrational Command | NUMERIQ.AI",
@@ -50,200 +54,346 @@ export default async function DashboardPage() {
     .select('*', { count: 'exact', head: true })
     .eq('user_id', session.user.id);
 
-  const { data: latestReadingData } = await supabase
+  const latestReadingData = await supabase
     .from('readings')
-    .select('ai_reading_json, created_at')
+    .select('insights, created_at')
     .eq('user_id', session.user.id)
     .order('created_at', { ascending: false })
     .limit(1)
-    .single();
+    .single()
+    .then(({ data }) => data);
 
-  const latestReading = latestReadingData?.ai_reading_json as unknown as AIParsedReading | undefined;
+  const latestReading = latestReadingData?.insights as unknown as AIParsedReading | undefined;
+  const destinyNum = latestReading?.mathData.destinyNumber;
+
+  // PROGRESSION FRICTION: Context-aware status with recovery arcs
+  const getPatternStatus = () => {
+    const statuses = [
+      { id: 'reinforcing', label: 'Reinforcing', color: 'emerald', recovery: null },
+      { id: 'holding', label: 'Holding', color: 'blue', recovery: null },
+      { id: 'straining', label: 'Straining', color: 'amber', recovery: "You resisted your natural resonance yesterday. Today is for structural realignment." },
+      { id: 'misaligned', label: 'Misaligned', color: 'rose', recovery: "The pattern shifted while you were away. Return to the sequence to stabilize." }
+    ];
+    const day = new Date().getDate();
+    const index = (day % 10) < 7 ? (day % 2) : 2 + (day % 2);
+    return statuses[index];
+  };
+
+  const status = getPatternStatus();
+
+  // EMOTIONAL PACING: Intensity rhythm (70% Deep, 30% Light)
+  const isLightMode = new Date().getDate() % 3 === 0;
+
+  // VARIABILITY ENGINE: Context-driven narrative
+  const getIdentityHit = (num: number) => {
+    if (isLightMode) return "Today is not about pressure. Just observe your pattern—don't force the sequence.";
+    const dayOfYear = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
+    if (status.recovery) return status.recovery;
+
+    const templates = [
+      (n: number) => `Your vibration was ${n === 1 ? 'intense' : 'fluid'} in the last cycle. Today, the sequence stabilizes.`,
+      (n: number) => `The resonance you built yesterday deepens. Today reveals how others respond to it.`,
+      (n: number) => `You felt the vibrational friction of ${n} yesterday. Today, it shifts into a structural opening.`
+    ];
+    return templates[dayOfYear % templates.length](num);
+  };
 
   return (
-    <div className="space-y-12 pb-20 pt-6">
+    <div className="relative z-10 space-y-12 pb-20 pt-6">
       
-      {/* 1. STATE-OF-THE-ART HERO */}
+      {/* 1. HERO SECTION (HUMANIZED & PACED) */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10">
-        <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-            <span className="text-[10px] uppercase font-black tracking-[0.4em] text-zinc-500">Live Matrix Connection</span>
+        <div className="space-y-6">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-[10px] uppercase font-black tracking-[0.4em] text-muted-foreground/60">Identity Signature v5.5</span>
+            </div>
+            {/* PROGRESSION SIGNAL */}
+            <div className={`px-3 py-1 rounded-full bg-${isLightMode ? 'blue' : status.color}-500/10 border border-${isLightMode ? 'blue' : status.color}-500/20 flex items-center gap-2`}>
+              <div className={`w-1.5 h-1.5 rounded-full bg-${isLightMode ? 'blue' : status.color}-500`} />
+              <span className={`text-[9px] font-black uppercase tracking-widest text-${isLightMode ? 'blue' : status.color}-500`}>
+                {isLightMode ? 'Pattern Status: Resting' : `Pattern Status: ${status.label}`}
+              </span>
+            </div>
           </div>
-          <h1 className="text-6xl font-['Playfair_Display'] font-black text-white tracking-tighter leading-tight">
-            The <span className="text-amber-500">Master</span> Dashboard.
-          </h1>
-          <p className="text-zinc-500 max-w-xl text-lg font-medium">
-            {latestReading 
-              ? `System Online. Currently synchronizing with your ${latestReading.mathData.destinyCompound} Destiny vibration.`
-              : "Awaiting your numerical initiation. Begin the analysis to unlock the command center."}
-          </p>
+
+          <div className="space-y-4">
+            <h1 className="text-6xl font-serif font-black text-foreground tracking-tighter leading-tight text-glow">
+              Good Evening, <span className="text-primary italic">{session.user.user_metadata?.full_name?.split(' ')[0] || 'Seeker'}</span>.
+            </h1>
+            <p className="text-white max-w-2xl text-2xl font-serif italic leading-relaxed">
+              {destinyNum 
+                ? `"${getIdentityHit(destinyNum)}"`
+                : "Awaiting your numerical initiation. Begin the analysis to unlock the command center."}
+            </p>
+            {!isLightMode && (
+              <div className="flex items-center gap-4 pt-2">
+                 <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-black text-zinc-600 uppercase tracking-widest">Next Sequence:</span>
+                    <span className="text-sm font-black text-primary uppercase font-mono tracking-tighter italic">Already Forming...</span>
+                 </div>
+                 <button className="text-[10px] font-black text-white/40 uppercase tracking-widest hover:text-primary transition-colors border-l border-white/10 pl-4">
+                    Stabilize Vibration
+                 </button>
+              </div>
+            )}
+          </div>
         </div>
         
         <Link 
           href="/dashboard/new" 
-          className="group relative px-10 py-5 bg-white text-black font-black rounded-2xl flex items-center gap-4 hover:bg-amber-500 transition-all shadow-[0_20px_40px_rgba(255,255,255,0.1)] active:scale-95"
+          className="group relative px-10 py-5 bg-white text-black font-black rounded-2xl flex items-center gap-4 hover:bg-primary hover:text-black transition-all shadow-2xl active:scale-95"
         >
           <UserPlus className="w-5 h-5 group-hover:rotate-12 transition-transform" />
           <span className="uppercase tracking-tighter">New Initiation</span>
-          <div className="absolute inset-0 bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
         </Link>
       </div>
 
-      {/* 2. REAL-TIME VIBRATION STATS */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {[
-          { label: "Intelligence Logs", value: readingCount || 0, icon: History, sub: "Total Protocols" },
-          { label: "Matrix Harmony", value: latestReading ? `${latestReading.mathData.harmonyScore}%` : "Awaiting", icon: Sparkles, sub: "Vibrational Alignment" },
-          { label: "Security Status", value: "Enterprise", icon: ShieldCheck, sub: "MFA Active" },
-          { label: "Current Phase", value: latestReading ? `Year ${latestReading.mathData.personalYear}` : "Awaiting", icon: CalendarDays, sub: "Personal Cycle" },
-        ].map((stat, i) => (
-          <div key={i} className="glass-card p-8 rounded-[2rem] relative group border-zinc-900 overflow-hidden">
-            <div className="absolute -top-10 -right-10 opacity-[0.03] group-hover:opacity-[0.07] group-hover:scale-110 transition-all duration-700">
-               <stat.icon className="w-32 h-32" />
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                 <div className="text-[10px] uppercase tracking-widest text-zinc-600 font-black">{stat.label}</div>
-                 <stat.icon className="w-4 h-4 text-amber-500/40" />
+      {/* 2. MAIN HUB PANEL */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        {/* Today's Personal Forecast (Large) */}
+        <div className="lg:col-span-2 glass-card rounded-[3rem] p-10 relative overflow-hidden group border-primary/10">
+          <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
+            <Activity className="w-64 h-64 text-primary" />
+          </div>
+          
+          <div className="space-y-10 relative z-10">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+                  <CalendarDays className="w-5 h-5" />
+                </div>
+                <div className="space-y-0.5">
+                  <div className="text-[10px] uppercase font-black tracking-widest text-primary">Daily Forecast</div>
+                  <div className="text-sm font-black text-foreground uppercase tracking-tight">{new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</div>
+                </div>
               </div>
-              <div className="text-3xl font-['Orbitron'] font-black text-white">{stat.value}</div>
-              <div className="text-[9px] text-zinc-500 font-bold uppercase tracking-wider">{stat.sub}</div>
+              <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[9px] font-black uppercase tracking-widest text-zinc-500">
+                Cycle Year {latestReading?.mathData.personalYear || '?'}
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <h3 className="text-4xl md:text-5xl font-serif font-black tracking-tight leading-tight">
+                A day for <span className="text-primary italic">strategic withdrawal.</span>
+              </h3>
+              <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl italic">
+                "Today your internal solar frequency (1) is modified by the lunar influence of the current cycle. Avoid aggressive initiations; instead, focus on consolidating the foundations of your recent expansions."
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <div className="px-6 py-3 bg-white/5 border border-white/5 rounded-xl space-y-1">
+                <div className="text-[8px] uppercase font-black tracking-widest text-zinc-600">Vibration Harmony</div>
+                <div className="text-lg font-black text-emerald-500">88%</div>
+              </div>
+              <div className="px-6 py-3 bg-white/5 border border-white/5 rounded-xl space-y-1">
+                <div className="text-[8px] uppercase font-black tracking-widest text-zinc-600">Best Hours</div>
+                <div className="text-lg font-black text-white">14:00 - 17:00</div>
+              </div>
+              <Link href="/dashboard/forecasts" className="ml-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-primary transition-colors">
+                View Weekly Path <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
-        ))}
-      </div>
-
-      {/* 3. PRIMARY INTELLIGENCE PREVIEW */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        
-        <div className="lg:col-span-2 space-y-6">
-           <div className="flex items-center justify-between px-2">
-              <h3 className="text-xl font-black text-white uppercase tracking-tighter flex items-center gap-3">
-                 <Star className="w-5 h-5 text-amber-500" />
-                 Active Protocol
-              </h3>
-              <Link href="/dashboard/history" className="text-[10px] uppercase font-black tracking-widest text-zinc-600 hover:text-amber-500 transition-colors">Complete Archive</Link>
-           </div>
-
-           {latestReading ? (
-             <div className="glass-card rounded-[2.5rem] p-10 relative overflow-hidden group shadow-2xl">
-                <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
-                   <Zap className="w-48 h-48 text-amber-500" />
-                </div>
-                
-                <div className="space-y-10 relative z-10">
-                   <div className="flex flex-col md:flex-row gap-10 items-start">
-                      <div className="relative shrink-0">
-                         <div className="w-28 h-28 rounded-[2rem] bg-zinc-950 border-2 border-zinc-900 group-hover:border-amber-500/50 transition-colors flex items-center justify-center relative shadow-inner">
-                            <span className="text-5xl font-['Orbitron'] font-black text-white group-hover:text-amber-500 transition-colors">{latestReading.mathData.destinyNumber}</span>
-                            <div className="absolute -bottom-3 bg-amber-500 text-black text-[9px] px-3 py-1 rounded-full font-black uppercase tracking-tighter">Destiny</div>
-                         </div>
-                         <div className="absolute inset-0 bg-amber-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </div>
-                      
-                      <div className="flex-1 space-y-4">
-                        <div className="flex items-center gap-4 text-zinc-600">
-                           <span className="text-xs font-bold uppercase tracking-widest">Type: Chaldean {latestReading.mathData.destinyCompound}</span>
-                           <div className="w-1.5 h-1.5 rounded-full bg-zinc-800" />
-                           <span className="text-xs font-bold uppercase tracking-widest">Date: {new Date(latestReadingData.created_at).toLocaleDateString()}</span>
-                        </div>
-                        <h4 className="text-3xl font-['Playfair_Display'] font-bold text-white tracking-tight">The {latestReading.mathData.destinyCompound} Protocol Synthesis.</h4>
-                        <p className="text-zinc-500 leading-relaxed max-w-2xl line-clamp-3 italic">
-                           "{latestReading.executiveSummary}"
-                        </p>
-                      </div>
-                   </div>
-
-                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-6 py-8 bg-zinc-950/50 border border-zinc-900 rounded-[2rem]">
-                      {[
-                        { label: "Life Path", val: latestReading.mathData.lifePathNumber, sub: latestReading.mathData.lifePathCompound },
-                        { label: "Soul Urge", val: latestReading.mathData.soulUrgeNumber, sub: "Inner" },
-                        { label: "Self Harmony", val: `${latestReading.mathData.harmonyScore}%`, sub: "Matrix" },
-                        { label: "Cycle Phase", val: `Year ${latestReading.mathData.personalYear}`, sub: "Growth" },
-                      ].map((item, i) => (
-                        <div key={i} className="text-center">
-                          <div className="text-[9px] uppercase tracking-tighter text-zinc-600 font-black mb-1">{item.label}</div>
-                          <div className="text-2xl font-['Orbitron'] font-black text-white/90">{item.val}</div>
-                          <div className="text-[8px] uppercase font-bold text-zinc-700">{item.sub}</div>
-                        </div>
-                      ))}
-                   </div>
-
-                   <Link 
-                     href="/dashboard/latest" 
-                     className="w-full py-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-amber-500/20 transition-all flex items-center justify-center gap-3 group/btn"
-                   >
-                     <span className="text-sm font-black text-white uppercase tracking-tighter">Access Theoretical Narrative Protocol</span>
-                     <ChevronRight className="w-4 h-4 text-amber-500 group-hover/btn:translate-x-1 transition-transform" />
-                   </Link>
-                </div>
-             </div>
-           ) : (
-             <div className="glass-card rounded-[2.5rem] p-20 text-center space-y-6 border-dashed border-zinc-800">
-                <div className="w-24 h-24 rounded-full bg-zinc-900/50 border-2 border-zinc-800 flex items-center justify-center mx-auto mb-4 group hover:border-amber-500/20 transition-all">
-                  <ShieldCheck className="w-10 h-10 text-zinc-700 group-hover:text-amber-500/40 transition-colors" />
-                </div>
-                <div className="space-y-2">
-                   <h4 className="text-3xl font-['Playfair_Display'] font-bold text-white tracking-tight">System Initialization Awaiting.</h4>
-                   <p className="text-zinc-500 text-sm max-w-sm mx-auto leading-relaxed">Your vibrational data has not been synchronized. Execute your first reading to activate the intelligence engine.</p>
-                </div>
-                <Link 
-                  href="/dashboard/new" 
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-amber-500 text-black rounded-xl font-black uppercase text-xs tracking-widest hover:bg-amber-400 transition-colors"
-                >
-                  Initiate Now <ChevronRight className="w-4 h-4" />
-                </Link>
-             </div>
-           )}
         </div>
 
-        {/* SIDEBAR: VIBRATIONAL REMEDIES */}
-        <div className="space-y-8">
-           <h3 className="text-xl font-black text-white uppercase tracking-tighter flex items-center gap-3 px-2">
-              <Zap className="w-5 h-5 text-amber-500" />
-              Remedy Status
-           </h3>
-
-           <div className="space-y-4">
+        {/* Primary Numbers Summary */}
+        <div className="glass-card rounded-[3rem] p-10 border-white/5 space-y-8 flex flex-col justify-between">
+          <div className="space-y-6">
+            <h3 className="text-xl font-black text-foreground uppercase tracking-tighter flex items-center gap-3">
+              <Star className="w-5 h-5 text-primary" />
+              Core Matrix
+            </h3>
+            
+            <div className="space-y-4">
               {[
-                { title: "Lucky Color", val: latestReading?.knowledgeContext.luckyElementsForProfile.colors[0].name ?? "N/A", icon: "🎨" },
-                { title: "Primary Element", val: latestReading?.knowledgeContext.destinyKnowledge.element ?? "N/A", icon: "☀️" },
-                { title: "Strategic Timing", icon: "📅", val: latestReading?.knowledgeContext.luckyElementsForProfile.days[0] ?? "N/A" },
-                { title: "Dominant Planet", val: latestReading?.knowledgeContext.destinyKnowledge.planet ?? "N/A", icon: "🪐" },
-              ].map((item, i) => (
-                <div key={i} className="glass-card p-5 rounded-2xl flex items-center gap-5 hover:border-amber-500/10 transition-all group cursor-default">
-                  <div className="w-12 h-12 rounded-[1rem] bg-zinc-950 border border-zinc-900 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition-transform">
-                    {item.icon}
-                  </div>
+                { label: "Destiny", val: latestReading?.mathData.destinyNumber || '?', compound: latestReading?.mathData.destinyCompound || '??' },
+                { label: "Life Path", val: latestReading?.mathData.lifePathNumber || '?', compound: latestReading?.mathData.lifePathCompound || '??' },
+                { label: "Soul Urge", val: latestReading?.mathData.soulUrgeNumber || '?', compound: 'Inner' },
+              ].map((num, i) => (
+                <div key={i} className="flex items-center justify-between p-4 bg-white/5 rounded-2xl border border-white/5">
                   <div className="space-y-0.5">
-                    <div className="text-[10px] uppercase text-zinc-600 font-black tracking-widest">{item.title}</div>
-                    <div className="text-sm font-black text-white tracking-tight uppercase">{item.val}</div>
+                    <div className="text-[9px] uppercase font-black tracking-widest text-zinc-500">{num.label}</div>
+                    <div className="text-xs font-bold text-zinc-400">{num.compound}</div>
                   </div>
+                  <div className="text-3xl font-black text-primary font-serif italic">{num.val}</div>
                 </div>
               ))}
-           </div>
+            </div>
+          </div>
 
-           <div className="bg-gradient-to-br from-amber-500/20 to-amber-500/5 border border-amber-500/20 rounded-[2rem] p-8 space-y-6 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-8 opacity-10 blur-lg group-hover:scale-125 transition-transform duration-700">
-                 <ShieldCheck className="w-48 h-48 text-amber-500" />
+          <Link href="/dashboard/latest" className="w-full py-5 rounded-2xl bg-primary text-black text-[10px] font-black uppercase tracking-widest text-center hover:bg-amber-400 transition-colors">
+            Access Full Protocol
+          </Link>
+        </div>
+      </div>
+
+      {/* 3. RECENT READINGS & QUICK CHECK */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        {/* Recent Readings List */}
+        <div className="lg:col-span-2 space-y-6">
+          <div className="flex items-center justify-between px-2">
+            <h3 className="text-xl font-black text-foreground uppercase tracking-tighter flex items-center gap-3">
+              <History className="w-5 h-5 text-primary" />
+              Intelligence Logs
+            </h3>
+            <Link href="/dashboard/history" className="text-[10px] uppercase font-black tracking-widest text-zinc-500 hover:text-primary transition-colors">View All</Link>
+          </div>
+
+          <div className="space-y-4">
+            {latestReading ? (
+              <div className="glass-card p-6 rounded-3xl border-white/5 flex items-center gap-6 hover:border-primary/10 transition-all group">
+                <div className="w-16 h-16 rounded-2xl bg-black flex items-center justify-center text-3xl font-black text-primary border border-white/5 group-hover:scale-105 transition-transform">
+                  {latestReading.mathData.destinyNumber}
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-black text-foreground uppercase tracking-tight">The {latestReading.mathData.destinyCompound} Protocol</span>
+                    <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[8px] font-black uppercase tracking-widest">Latest</span>
+                  </div>
+                  <p className="text-xs text-zinc-500 line-clamp-1 italic">"{latestReading.executiveSummary}"</p>
+                </div>
+                <ChevronRight className="w-5 h-5 text-zinc-800 group-hover:text-primary transition-colors" />
               </div>
-              <div className="flex items-center gap-2 text-amber-500">
-                 <ShieldCheck className="w-5 h-5" />
-                 <span className="text-[10px] uppercase font-black tracking-[0.2em]">Matrix Premium</span>
+            ) : (
+              <div className="p-12 glass-card rounded-3xl border-dashed border-white/10 text-center text-zinc-600 text-sm italic">
+                No archived readings found.
               </div>
-              <div className="space-y-2 relative z-10">
-                 <h4 className="text-lg font-bold text-white tracking-tight uppercase">Unlock Full Protocol v5.0</h4>
-                 <p className="text-xs text-zinc-500 leading-relaxed">
-                   Gain access to the complete 35-page theoretical PDF, the Compatibility Matrix, and real-time AI consultation.
-                 </p>
-              </div>
-              <button className="w-full py-4 rounded-xl bg-amber-500 text-black text-[10px] font-black uppercase tracking-widest hover:bg-amber-400 transition-colors shadow-2xl active:scale-95">
-                 Optimize My Path
-              </button>
-           </div>
+            )}
+          </div>
         </div>
 
+        {/* Compatibility Quick Check */}
+        <div className="space-y-6">
+          <h3 className="text-xl font-black text-foreground uppercase tracking-tighter flex items-center gap-3 px-2">
+            <Users className="w-5 h-5 text-primary" />
+            Quick Synergy
+          </h3>
+          
+          <QuickSynergy />
+        </div>
+      </div>
+
+      {/* 4. VIBRATIONAL SUCCESS STORIES */}
+      <div className="space-y-6">
+        <div className="flex items-center justify-between px-2">
+          <h3 className="text-xl font-black text-foreground uppercase tracking-tighter flex items-center gap-3">
+            <Star className="w-5 h-5 text-primary" />
+            Success Stories
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { name: "A.R. Rahman", change: "A.S. Dileep Kumar → Rahman", impact: "2x Academy Awards", icon: "🎬" },
+            { name: "Amitabh Bachchan", change: "Inquilaab → Amitabh", impact: "Star of the Millennium", icon: "🌟" },
+            { name: "Lady Gaga", change: "Stefani → Gaga", impact: "13x Grammy Winner", icon: "🎤" },
+          ].map((story, i) => (
+            <div key={i} className="glass-card p-6 rounded-3xl flex items-center gap-5 hover:border-primary/20 transition-all group border-white/5">
+              <div className="w-14 h-14 rounded-2xl bg-black/40 border border-white/5 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform group-hover:border-primary/20">
+                {story.icon}
+              </div>
+              <div className="space-y-1">
+                <div className="text-[10px] uppercase text-primary/60 font-black tracking-widest">{story.name}</div>
+                <div className="text-sm font-black text-foreground tracking-tight">{story.impact}</div>
+                <div className="text-[9px] text-muted-foreground/40 font-bold italic">{story.change}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* 2. RELATIONAL COLLISION (SHARED DAILY LOOP) */}
+      <div className="pt-10">
+         <div className="glass-card p-10 rounded-[3rem] border-primary/20 bg-primary/5 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-10 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
+               <Zap className="w-48 h-48 text-primary" />
+            </div>
+            <div className="relative z-10 space-y-8">
+               <div className="flex items-center justify-between">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[9px] font-black uppercase tracking-widest text-primary">
+                     Active Dynamic: Arjun
+                  </div>
+                  <div className="flex items-center gap-2 text-[10px] font-black text-zinc-500 uppercase tracking-widest">
+                     Status: Awaiting Partner
+                  </div>
+               </div>
+               
+               <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="space-y-6">
+                     <h3 className="text-4xl font-serif font-black italic">"Today, your patterns collide."</h3>
+                     <p className="text-white text-xl font-medium leading-relaxed">
+                        One will withdraw. One will push. The sequence indicates a friction point in your evening communication cycle.
+                     </p>
+                     <div className="p-6 rounded-2xl bg-white/5 border border-white/10 italic text-zinc-400 text-sm">
+                        "Your partner hasn't aligned yet. The **Resolution Protocol** is pending, but your side of the pattern reveals a required pivot."
+                     </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                     <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-4">
+                        <div className="flex justify-between items-center">
+                           <span className="text-[10px] font-black text-zinc-600 uppercase tracking-widest">Your Position</span>
+                           <span className="text-xs font-black text-emerald-500 uppercase">Pivot</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                           <span className="text-[10px] font-black text-zinc-600 uppercase tracking-widest">Arjun's Position</span>
+                           <span className="text-xs font-black text-zinc-700 uppercase">Awaiting Alignment</span>
+                        </div>
+                     </div>
+                     <div className="grid grid-cols-2 gap-3">
+                        <button className="py-4 bg-primary text-black rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-white transition-all">
+                           Ping Partner
+                        </button>
+                        <button className="py-4 bg-white/5 border border-white/10 text-white rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-white/10 transition-all">
+                           Reveal My Side
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div className="pt-10">
+         <div className="glass-card p-10 rounded-[3rem] border-white/5 bg-gradient-to-br from-zinc-900 to-black relative overflow-hidden group">
+            <div className="absolute bottom-0 right-0 p-12 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
+               <Activity className="w-64 h-64 text-zinc-500" />
+            </div>
+            <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+               <div className="space-y-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800 border border-zinc-700 text-[9px] font-black uppercase tracking-widest text-zinc-400">
+                     Global Sequence: 5 (Change)
+                  </div>
+                  <div className="space-y-3">
+                     <h3 className="text-3xl font-serif font-black italic">The World Pushes Change.</h3>
+                     <p className="text-zinc-500 text-lg leading-relaxed font-medium">
+                        Today the collective vibration (5) forces structural pivots. For your pattern ({destinyNum}), this creates a friction point. **If you resist this, friction increases. If you align with it, momentum builds.**
+                     </p>
+                  </div>
+                  <div className="pt-4">
+                     <button className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary hover:text-white transition-colors">
+                        View Global Resonance Map <ArrowRight className="w-4 h-4" />
+                     </button>
+                  </div>
+               </div>
+               <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: "Collective Focus", val: "Innovation" },
+                    { label: "Market Resonance", val: "Volatile" },
+                    { label: "Relational Heat", val: "High" },
+                    { label: "Sovereign Leverage", val: "Pivot" },
+                  ].map((item, i) => (
+                    <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-1">
+                       <div className="text-[8px] font-black text-zinc-600 uppercase tracking-widest">{item.label}</div>
+                       <div className="text-sm font-black text-white uppercase tracking-tight">{item.val}</div>
+                    </div>
+                  ))}
+               </div>
+            </div>
+         </div>
       </div>
     </div>
   );

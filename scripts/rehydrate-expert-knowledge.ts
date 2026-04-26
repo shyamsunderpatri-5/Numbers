@@ -2,6 +2,11 @@ import { createClient } from "@supabase/supabase-js";
 import { NUMBER_KNOWLEDGE } from "../src/lib/numerology/knowledge/numbers-1-9";
 import { COMPOUND_MEANINGS } from "../src/lib/numerology/knowledge/compounds-10-52";
 import { LUCKY_ELEMENTS } from "../src/lib/numerology/knowledge/lucky-elements";
+import * as dotenv from "dotenv";
+import * as path from "path";
+
+// Load environment variables from .env.local
+dotenv.config({ path: path.join(process.cwd(), ".env.local") });
 
 /**
  * NUMERIQ.AI — Knowledge Hydration Protocol
@@ -22,12 +27,12 @@ async function hydrate() {
     const { error } = await supabase
       .from("knowledge_base")
       .upsert({
-        id: `number_${num}`,
-        knowledge_type: "core_number",
-        number: parseInt(num),
-        title: data.name,
+        knowledge_type: "number_1_9",
+        key: num.toString(),
         content: data,
-        tags: ["traditional", "cheiro", "planetary"]
+        is_active: true
+      }, {
+        onConflict: 'knowledge_type,key'
       });
     if (error) console.error(`   ❌ Error on Number ${num}:`, error.message);
   }
@@ -38,12 +43,12 @@ async function hydrate() {
     const { error } = await supabase
       .from("knowledge_base")
       .upsert({
-        id: `compound_${num}`,
         knowledge_type: "compound",
-        number: parseInt(num),
-        title: data.chaldeanName,
+        key: num.toString(),
         content: data,
-        tags: ["traditional", "cheiro", "compound"]
+        is_active: true
+      }, {
+        onConflict: 'knowledge_type,key'
       });
     if (error) console.error(`   ❌ Error on Compound ${num}:`, error.message);
   }
@@ -54,12 +59,12 @@ async function hydrate() {
     const { error } = await supabase
       .from("knowledge_base")
       .upsert({
-        id: `lucky_${num}`,
         knowledge_type: "lucky_elements",
-        number: parseInt(num),
-        title: `Lucky Elements for ${num}`,
+        key: num.toString(),
         content: data,
-        tags: ["traditional", "cheiro", "remedy"]
+        is_active: true
+      }, {
+        onConflict: 'knowledge_type,key'
       });
     if (error) console.error(`   ❌ Error on Lucky ${num}:`, error.message);
   }

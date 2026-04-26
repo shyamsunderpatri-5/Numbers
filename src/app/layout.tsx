@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, DM_Sans, Playfair_Display, Orbitron } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Playfair_Display, Cinzel } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -7,9 +7,9 @@ const inter = Inter({
   variable: '--font-inter'
 });
 
-const dmSans = DM_Sans({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: '--font-dm-sans'
+  variable: '--font-plus-jakarta'
 });
 
 const playfair = Playfair_Display({
@@ -17,9 +17,9 @@ const playfair = Playfair_Display({
   variable: '--font-playfair'
 });
 
-const orbitron = Orbitron({
+const cinzel = Cinzel({
   subsets: ["latin"],
-  variable: '--font-orbitron'
+  variable: '--font-cinzel'
 });
 
 export const metadata: Metadata = {
@@ -37,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSans.variable} ${playfair.variable} ${orbitron.variable} scroll-smooth`}>
-      <body className="antialiased selection:bg-amber-500/30 selection:text-white" suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable} ${playfair.variable} ${cinzel.variable} scroll-smooth`}>
+      <body className="antialiased selection:bg-purple-500/30 selection:text-white" suppressHydrationWarning>
         {children}
       </body>
     </html>

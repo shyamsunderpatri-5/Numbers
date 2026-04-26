@@ -7,14 +7,19 @@ export async function POST(request: NextRequest) {
     const rateLimitError = checkRateLimit(request, '/api/sovereign-reading', 10, 60000);
     if (rateLimitError) return rateLimitError;
 
-    const { name, birthDay } = await request.json();
+    const { name, birthDay, birthMonth, birthYear } = await request.json();
 
-    if (!name || !birthDay) {
-      return NextResponse.json({ error: "Missing name or birthDay" }, { status: 400 });
+    if (!name || !birthDay || !birthMonth || !birthYear) {
+      return NextResponse.json({ error: "Missing name or DOB components" }, { status: 400 });
     }
 
     // Call the deterministic synthesis engine (which stops before Groq)
-    const { contract } = await synthesize(name, parseInt(birthDay, 10));
+    const { contract } = await synthesize(
+      name, 
+      parseInt(birthDay, 10), 
+      parseInt(birthMonth, 10), 
+      parseInt(birthYear, 10)
+    );
 
     // Frame traits interpretively as per user requirements
     const compoundTraits = contract.identity_layer.raw_traits.compound.join(", ");

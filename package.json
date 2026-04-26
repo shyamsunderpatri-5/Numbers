@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run safety-audit && next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "safety-audit": "tsx scripts/run-safety-audit.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -20,6 +21,7 @@
     "@radix-ui/react-switch": "^1.2.6",
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-toast": "^1.2.15",
+    "@react-pdf/renderer": "^4.5.1",
     "@sentry/nextjs": "^10.49.0",
     "@stripe/stripe-js": "^9.3.0",
     "@supabase/ssr": "^0.10.2",
@@ -58,6 +60,7 @@
     "eslint-config-next": "16.2.4",
     "jsdom": "^29.0.2",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5",
     "vitest": "^4.1.4"
   }
